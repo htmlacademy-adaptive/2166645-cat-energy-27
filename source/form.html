@@ -17,7 +17,11 @@
       </a>
     </div>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">
+          Открыть меню
+        </span>
+      </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
@@ -41,57 +45,76 @@
   </header>
   <main class="main-container">
     <header class="main-form-header">
-      <h1 class="main-form-header__title">Подбор программы</h1>
-      <p class="main-form-header__discription">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <h1 class="main-form-header__title">
+        Подбор программы
+      </h1>
+      <p class="main-form-header__discription">
+        Заполните анкету, и мы подберем программу питания для вашего кота
+      </p>
     </header>
     <form class="form" action="https://echo.htmlacademy.ru/" method="get">
       <fieldset class="main-database">
-        <legend class="visually-hidden">Основные данные котика</legend>
+        <legend class="visually-hidden">
+          Основные данные котика
+        </legend>
         <ul class="main-database__list">
           <li class="main-database__item">
-            <label class="main-database__label cat-name" for="cat-name">Имя:*
+            <label class="main-database__label cat-name" for="cat-name">
+              Имя:*
               <input class="cat-name__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
             </label>
           </li>
           <li class="main-database__item">
-            <label class="main-database__label cat-weight" for="cat-weight">Вес (кг):*
+            <label class="main-database__label cat-weight" for="cat-weight">
+              Вес (кг):*
               <input class="cat-weight__input" type="number" name="cat-weight" id="cat-weight" placeholder="7">
             </label>
           </li>
           <li class="main-database__item">
-            <label class="main-database__label cat-age" for="cat-age">Возраст (лет):
+            <label class="main-database__label cat-age" for="cat-age">
+              Возраст (лет):
               <input class="cat-age__input" type="number" name="cat-age" id="cat-age" placeholder="7">
             </label>
           </li>
         </ul>
       </fieldset>
       <fieldset class="weight-program">
-        <legend class="visually-hidden">Выбор программы питания для котика</legend>
+        <legend class="visually-hidden">
+          Выбор программы питания для котика
+        </legend>
         <ul class="weight-program__list">
           <li class="weight-program__item">
             <label class="weight-program__label weight-loss" for="weight-loss">
               <input class="weight-loss__input" type="radio" name="weight-loss" value="weight-loss" id="weight-loss"
                 checked>
-              <span class="weight-loss__name">Похудение</span>
+              <span class="weight-loss__name">
+                Похудение
+              </span>
             </label>
           </li>
           <li class="weight-program__item">
             <label class="weight-program__label weight-gain" for="weight-gain">
               <input class="weight-gain__input" type="radio" name="weight-gain" id="weight-gain" value="weight-gain">
-              <span class="weight-gain__name">Набор массы</span>
+              <span class="weight-gain__name">
+                Набор массы
+              </span>
             </label>
           </li>
           <li class="weight-program__item">
             <label class="weight-program__label weight-need-advice" for="weight-need-advice">
               <input class="weight-need-advice__input" type="radio" name="weight-need-advice" id="weight-need-advice"
                 value="need-advice">
-              <span class="weight-need-advice__name">Не знаю (Нужен ваш совет)</span>
+              <span class="weight-need-advice__name">
+                Не знаю (Нужен ваш совет)
+              </span>
             </label>
           </li>
         </ul>
       </fieldset>
       <fieldset class="owner-contacts">
-        <legend class="owner-contacts__title">Контактные данные (владельца кота)</legend>
+        <legend class="owner-contacts__title">
+          Контактные данные (владельца кота)
+        </legend>
         <label class="owner-contacts__label owner-email" for="owner-email">
           E-mail:*
           <input type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com">
@@ -102,47 +125,70 @@
         </label>
       </fieldset>
       <fieldset class="comments">
-        <legend class="comments__title">Комментарий</legend>
-        <textarea class="comments__text" name="comment" id="comment-field" rows="10" cols="30">Расскажите обо всех повадках кота
+        <legend class="comments__title">
+          Комментарий
+        </legend>
+        <textarea class="comments__text" name="comment" id="comment-field" rows="10" cols="30">
+          Расскажите обо всех повадках кота
         </textarea>
       </fieldset>
       <fieldset class="additional-goods">
-        <legend class="additional-goods__title">Дополнительно</legend>
+        <legend class="additional-goods__title">
+          Дополнительно
+        </legend>
         <ul class="additional-goods__list">
           <li class="additional-goods__item">
             <label class="additional-goods__label" for="sweetener">
               <input class="additional-goods__input" type="checkbox" name="sweetener" id="sweetener" checked>
-              <span class="additional-goods__name">Сахарозаменитель</span>
+              <span class="additional-goods__name">
+                Сахарозаменитель
+              </span>
             </label>
           </li>
           <li class="additional-goods__item">
             <label class="additional-goods__label" for="drink-water">
               <input class="additional-goods__input" type="checkbox" name="drink-water" id="drink-water">
-              <span class="additional-goods__name">Питьевая вода</span>
+              <span class="additional-goods__name">
+                Питьевая вода
+              </span>
             </label>
           </li>
           <li class="additional-goods__item">
             <label class="additional-goods__label" for="milk">
               <input class="additional-goods__input" type="checkbox" name="milk" id="milk">
-              <span class="additional-goods__name">Молоко</span>
+              <span class="additional-goods__name">
+                Молоко
+              </span>
             </label>
           </li>
           <li class="additional-goods__item">
             <label class="additional-goods__label" for="vitamins">
               <input class="additional-goods__input" type="checkbox" name="vitamins" id="vitamins">
-              <span class="additional-goods__name">Витамины</span>
+              <span class="additional-goods__name">
+                Витамины
+              </span>
             </label>
           </li>
         </ul>
       </fieldset>
-      <button class="button form__button-send" type="submit">Отправить заявку</button>
-      <small class="form__required-fields">* — Обязательные поля</small>
+      <button class="button form__button-send" type="submit">
+        Отправить заявку
+      </button>
+      <small class="form__required-fields">
+        * — Обязательные поля
+      </small>
     </form>
     <section class="for-dealers">
-      <h2 class="visually-hidden">Приглашение к сотрудничеству</h2>
+      <h2 class="visually-hidden">
+        Приглашение к сотрудничеству
+      </h2>
       <div class="for-dealers__wrapper">
-        <p class="for-dealers__invitation">Приглашаем к сотрудничеству дилеров!</p>
-        <address class="for-dealers__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <p class="for-dealers__invitation">
+          Приглашаем к сотрудничеству дилеров!
+        </p>
+        <address class="for-dealers__address">
+          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+        </address>
       </div>
       <img class="for-dealers__map" src="./img/map.jpg" width="320" height="362" alt="Карта.">
       <img class="for-dealers__map-pin" src="./img/map-pin.png" width="57" height="53"
@@ -195,10 +241,13 @@
       </li>
     </ul>
     <div class="htmlacademy">
-      <a class="htmlacademy__link-name" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      <a class="htmlacademy__link-icon" href="https://htmlacademy.ru/intensive/adaptive"><span
-          class="visually-hidden">Логотип HTML
-          Academy</span>
+      <a class="htmlacademy__link-name" href="https://htmlacademy.ru/intensive/adaptive">
+        HTML Academy
+      </a>
+      <a class="htmlacademy__link-icon" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="visually-hidden">
+          Логотип HTML Academy
+        </span>
         <img class="htmlacademy__icon" src="./img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy.">
       </a>
     </div>
