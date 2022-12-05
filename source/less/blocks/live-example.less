@@ -1,7 +1,7 @@
 .live-example {
   background-color: @live-example-back-color;
   padding-top: 25px;
-  padding-bottom: 40px;
+  padding-bottom: @value * 2;
   .padding-horizontal(@value);
 }
 
@@ -10,7 +10,7 @@
   font-style: inherit;
   font-weight: inherit;
   font-size: 36px;
-  line-height: @line-base * 2;
+  line-height: @value * 2;
 }
 
 .live-example__description {
@@ -45,6 +45,6 @@
   font-style: @style-base;
   font-weight: @weight-base;
   font-size: 14px;
-  line-height: @line-base;
+  line-height: @value;
   text-transform: uppercase;
 }
