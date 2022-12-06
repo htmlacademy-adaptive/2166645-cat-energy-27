@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initail-scale=1">
+  <link href="css/style.css" rel="stylesheet">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
@@ -48,12 +50,14 @@
       Cat energy
     </h1>
     <section class="functional-food">
-      <h2 class="functional-food__title">
-        Функциональное питание для котов
-      </h2>
-      <p class="functional-food__motivation">
-        Занялся собой? Займись котом!
-      </p>
+      <div class="functional-food__text-block">
+        <h2 class="functional-food__title">
+          Функциональное питание для котов
+        </h2>
+        <p class="functional-food__motivation">
+          Занялся собой? Займись котом!
+        </p>
+      </div>
       <div class="functional-food__selection-program-block selection-program">
         <img class="selection-program__photo main-package-photo" src="./img/glass-mobile.png" width="280" height="270"
           alt="Упаковка в форме стакана Cat Energy Pro курица 500г.">
@@ -146,12 +150,12 @@
         </dd>
       </dl>
       <div class="live-example__expenses">
-        <p class="live-example__expenses-title">
+        <span class="live-example__expenses-title">
           Затраты на питание:
-        </p>
-        <p class="live-example__expenses-sum">
+        </span>
+        <span class="live-example__expenses-sum">
           15 000 руб.
-        </p>
+        </span>
       </div>
       <div class="live-example__slider">
         <img class="live-example__slider-left-photo" src="./img/slider-cat-before.png" width="140" height="256"
@@ -173,9 +177,9 @@
         <p class="for-dealers__invitation">
           Приглашаем к сотрудничеству дилеров!
         </p>
-        <address class="for-dealers__address">
+        <p class="for-dealers__address">
           ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-        </address>
+        </p>
       </div>
       <img class="for-dealers__map" src="./img/map.jpg" width="320" height="362" alt="Карта.">
       <img class="for-dealers__map-pin" src="./img/map-pin.png" width="57" height="53"
@@ -227,7 +231,7 @@
         </a>
       </li>
     </ul>
-    <div class="htmlacademy">
+    <div class="main-footer__htmlacademy htmlacademy">
       <a class="htmlacademy__link-name" href="https://htmlacademy.ru/intensive/adaptive">
         HTML Academy
       </a>

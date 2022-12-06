@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Форма: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initail-scale=1">
 </head>
 
 <body class="page__body">
@@ -48,91 +50,96 @@
       <h1 class="main-form-header__title">
         Подбор программы
       </h1>
-      <p class="main-form-header__discription">
+      <p class="main-form-header__description">
         Заполните анкету, и мы подберем программу питания для вашего кота
       </p>
     </header>
     <form class="form" action="https://echo.htmlacademy.ru/" method="get">
-      <fieldset class="main-database">
+      <fieldset class="form__database main-database">
         <legend class="visually-hidden">
           Основные данные котика
         </legend>
         <ul class="main-database__list">
           <li class="main-database__item">
-            <label class="main-database__label cat-name" for="cat-name">
+            <label class="main-database__label" for="cat-name">
               Имя:*
-              <input class="cat-name__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
+              <input class="main-database__input" type="text" name="cat-name" id="cat-name"
+                placeholder="Барсик">
             </label>
           </li>
           <li class="main-database__item">
-            <label class="main-database__label cat-weight" for="cat-weight">
+            <label class="main-database__label" for="cat-weight">
               Вес (кг):*
-              <input class="cat-weight__input" type="number" name="cat-weight" id="cat-weight" placeholder="7">
+              <input class="main-database__input" type="number" name="cat-weight" id="cat-weight"
+                placeholder="7">
             </label>
           </li>
           <li class="main-database__item">
-            <label class="main-database__label cat-age" for="cat-age">
+            <label class="main-database__label" for="cat-age">
               Возраст (лет):
-              <input class="cat-age__input" type="number" name="cat-age" id="cat-age" placeholder="7">
+              <input class="main-database__input" type="number" name="cat-age" id="cat-age"
+                placeholder="7">
             </label>
           </li>
         </ul>
       </fieldset>
-      <fieldset class="weight-program">
+      <fieldset class="form__weight-program weight-program">
         <legend class="visually-hidden">
           Выбор программы питания для котика
         </legend>
         <ul class="weight-program__list">
           <li class="weight-program__item">
-            <label class="weight-program__label weight-loss" for="weight-loss">
-              <input class="weight-loss__input" type="radio" name="weight-loss" value="weight-loss" id="weight-loss"
-                checked>
-              <span class="weight-loss__name">
+            <label class="weight-program__label" for="weight-loss">
+              <input class="weight-program__input" type="radio" name="weight-loss"
+                value="weight-loss" id="weight-loss" checked>
+              <span class="weight-program__name">
                 Похудение
               </span>
             </label>
           </li>
           <li class="weight-program__item">
-            <label class="weight-program__label weight-gain" for="weight-gain">
-              <input class="weight-gain__input" type="radio" name="weight-gain" id="weight-gain" value="weight-gain">
-              <span class="weight-gain__name">
+            <label class="weight-program__label" for="weight-gain">
+              <input class="weight-program__input" type="radio" name="weight-gain" id="weight-gain"
+                value="weight-gain">
+              <span class="weight-program__name">
                 Набор массы
               </span>
             </label>
           </li>
           <li class="weight-program__item">
-            <label class="weight-program__label weight-need-advice" for="weight-need-advice">
-              <input class="weight-need-advice__input" type="radio" name="weight-need-advice" id="weight-need-advice"
-                value="need-advice">
-              <span class="weight-need-advice__name">
+            <label class="weight-program__label" for="weight-need-advice">
+              <input class="weight-program__input" type="radio" name="weight-need-advice"
+                id="weight-need-advice" value="need-advice">
+              <span class="weight-program__name">
                 Не знаю (Нужен ваш совет)
               </span>
             </label>
           </li>
         </ul>
       </fieldset>
-      <fieldset class="owner-contacts">
+      <fieldset class="form__owner-contacts owner-contacts">
         <legend class="owner-contacts__title">
           Контактные данные (владельца кота)
         </legend>
-        <label class="owner-contacts__label owner-email" for="owner-email">
+        <label class="owner-contacts__label" for="owner-email">
           E-mail:*
-          <input type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com">
+          <input class="owner-contacts__input" type="email" name="owner-email" id="owner-email"
+            placeholder="kuklachev@gmail.com">
         </label>
-        <label class="owner-contacts__label owner-phone" for="owner-phone">
+        <label class="owner-contacts__label" for="owner-phone">
           Телефон:*
-          <input type="tel" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90">
+          <input class="owner-contacts__input" type="tel" name="owner-phone" id="owner-phone"
+            placeholder="8 (960) 900-60-90">
         </label>
       </fieldset>
-      <fieldset class="comments">
+      <fieldset class="form__comments comments">
         <legend class="comments__title">
           Комментарий
         </legend>
-        <textarea class="comments__text" name="comment" id="comment-field" rows="10" cols="30">
-          Расскажите обо всех повадках кота
+        <textarea class="comments__text" name="comment" id="comment-field" rows="10" cols="40">Расскажите обо всех повадках кота
         </textarea>
       </fieldset>
-      <fieldset class="additional-goods">
+      <fieldset class="form__additional-goods additional-goods">
         <legend class="additional-goods__title">
           Дополнительно
         </legend>
@@ -171,18 +178,20 @@
           </li>
         </ul>
       </fieldset>
-      <button class="button form__button-send" type="submit">
+      <button class="button form__button-send additional-goods__button-send" type="submit">
         Отправить заявку
       </button>
-      <small class="form__required-fields">
+      <div class="form__remark">
+        <small class="form__required-fields">
         * — Обязательные поля
-      </small>
+        </small>
+      </div>
     </form>
-    <section class="for-dealers">
+    <section class="for-dealers for-dealers--darker">
       <h2 class="visually-hidden">
         Приглашение к сотрудничеству
       </h2>
-      <div class="for-dealers__wrapper">
+      <div class="for-dealers__wrapper for-dealers__wrapper--darker">
         <p class="for-dealers__invitation">
           Приглашаем к сотрудничеству дилеров!
         </p>
@@ -240,7 +249,7 @@
         </a>
       </li>
     </ul>
-    <div class="htmlacademy">
+    <div class="main-footer__htmlacademy htmlacademy">
       <a class="htmlacademy__link-name" href="https://htmlacademy.ru/intensive/adaptive">
         HTML Academy
       </a>

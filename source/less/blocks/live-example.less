@@ -1,0 +1,50 @@
+.live-example {
+  background-color: @live-example-back-color;
+  padding-top: 25px;
+  padding-bottom: @value * 2;
+  .padding-horizontal(@value);
+}
+
+.live-example__title {
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: 36px;
+  line-height: @value * 2;
+}
+
+.live-example__description {
+  font-family: @family-optional;
+  font-style: @style-base;
+  font-weight: @weight-base;
+  font-size: 14px;
+  line-height: 18px;
+  color: @paragraph-text-color;
+}
+
+.live-example__item-term {
+  font-family: @family-base;
+  font-style: @style-base;
+  font-weight: @weight-base;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.live-example__item-description {
+  font-family: @family-optional;
+  font-style: @style-base;
+  font-weight: @weight-base;
+  font-size: 12px;
+  line-height: 12px;
+  color: @paragraph-text-color;
+}
+
+.live-example__expenses {
+  font-family: @family-base;
+  font-style: @style-base;
+  font-weight: @weight-base;
+  font-size: 14px;
+  line-height: @value;
+  text-transform: uppercase;
+}
