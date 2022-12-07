@@ -1,8 +1,19 @@
 .live-example {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
   background-color: @live-example-back-color;
-  padding-top: 25px;
-  padding-bottom: @value * 2;
-  .padding-horizontal(@value);
+  outline: 5px solid rgba(32, 9, 212, 0.8);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    background-color: @button-text-color;
+  }
+}
+
+.live-example__container {
+  padding: 25px @value 40px @value;
 }
 
 .live-example__title {
@@ -22,6 +33,20 @@
   color: @paragraph-text-color;
 }
 
+.live-example__list-expenses-container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    width: 708px;
+  }
+}
+
+.live-example__list {
+  display: grid;
+  grid-template-columns: repeat(2, 124px);
+  column-gap: 32px;
+}
+
 .live-example__item-term {
   font-family: @family-base;
   font-style: @style-base;
@@ -29,6 +54,7 @@
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
+  grid-row: 1 / 2;
 }
 
 .live-example__item-description {
@@ -37,7 +63,8 @@
   font-weight: @weight-base;
   font-size: 12px;
   line-height: 12px;
-  color: @paragraph-text-color;
+  color: @paragra2ph-text-color;
+  grid-row: 2 / -1;
 }
 
 .live-example__expenses {
@@ -47,4 +74,8 @@
   font-size: 14px;
   line-height: @value;
   text-transform: uppercase;
+}
+
+.live-example__slider {
+  display: flex;
 }

@@ -1,12 +1,49 @@
 .food-programs {
+  display: flex;
+  width: 280px;
+  margin: 0 auto;
   margin-bottom: 20px;
-  .padding-horizontal(@value);
+  padding: 0 @value;
+  outline: 5px solid rgba(21, 23, 21, 0.8);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    padding: 0 30px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    padding: 0 110px;
+    margin-bottom: 71px;
+  }
 }
 
 .food-programs__list {
   list-style-type: none;
-  margin: 0;
+  display: grid;
+  grid-template-columns: 280px;
+  row-gap: @value;
+  margin: 0 auto;
   padding: 0;
+  outline: 5px solid rgba(246, 242, 4, 0.8);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 708px;
+    row-gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(2, 570px);
+    column-gap: 80px;
+  }
+}
+
+.food-programs__item {
+  outline: 5px solid rgba(246, 121, 4, 0.8);
+  outline-offset: -5px;
   background-color: @footer-back-color;
 }
 

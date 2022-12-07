@@ -1,8 +1,25 @@
 .page {
+  height: 100%;
   font-family: @family-base;
   font-style: @style-base;
   font-weight: @weight-base;
   font-size: 16px;
   line-height: @value;
+  min-width: 320px;
+  outline: 5px solid rgba(0, 255, 0, 0.8);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1440px;
+  }
+}
+
+.page__body {
+  min-height: 100%;
+  margin: 0;
   color: @base-text-color;
 }
