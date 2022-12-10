@@ -1,12 +1,41 @@
 .functional-food {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  margin: 0 auto;
+  padding-bottom: @value;
+  outline: 5px solid rgba(1, 73, 1, 0.8);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 82px;
+    /* background-image: url("../../img/rectangle-green.png"), url("../../img/cat-main-background-desktop.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 50% 694px;*/
+  }
 }
 
 .functional-food__text-block {
-  background-color: @hero-back-color;
-  background-image: url("../../../img/cat-main-background.png");
+  background-image: url("../../img/rectangle-green.png"), url("../../../img/cat-main-background.png");
   background-repeat: no-repeat;
+  background-color: @hero-back-color;
   height: 302px;
+
+  @media (min-width: @tablet-width) {
+    background-color: @button-text-color;
+    background-image: none;
+    height: 201px;
+  }
 }
 
 .functional-food__title {
@@ -20,6 +49,12 @@
   margin-left: 36px;
   margin-right: 35px;
   padding: 0;
+  outline: 5px solid rgba(1, 73, 1, 0.8);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    color: @base-text-color;
+  }
 }
 
 .functional-food__motivation {
@@ -31,8 +66,35 @@
   line-height: 14px;
   text-transform: uppercase;
   margin-left: 60px;
+  outline: 5px solid rgba(1, 73, 1, 0.8);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    color: @base-text-color;
+  }
 }
 
 .functional-food__selection-program-block {
+  display: flex;
+  flex-direction: column;
   .padding-horizontal(@value);
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row-reverse;
+  }
+}
+
+.functional-food__photo {
+  outline: 5px solid rgba(1, 73, 1, 0.8);
+  outline-offset: -5px;
+}
+
+.functional-food__button {
+  width: 280px;
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+    height: 54px;
+    align-self: center;
+  }
 }
