@@ -4,6 +4,25 @@
   font-weight: inherit;
   font-size: 36px;
   line-height: 36px;
+  display: flex;
+  width: 280px;
+  margin: 0 auto;
   .padding-horizontal(@value);
-  border-bottom: 1px solid #ebebeb;
+  padding-top: 27px;
+  padding-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    width: 738px;
+    border-bottom: none;
+    padding-top: 65px;
+    padding-left: 30px;
+    padding-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 78px 110px 0 110px;
+    width: 1220px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
