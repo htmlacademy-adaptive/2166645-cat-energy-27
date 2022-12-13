@@ -1,3 +1,21 @@
+.main-form-header {
+  width: 280px;
+  margin: 0 auto;
+  .padding-horizontal(@value);
+  outline: 5px solid rgba(32, 9, 212, 0.8);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    width: 628px;
+    .padding-horizontal(70px);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    .padding-horizontal(110px);
+  }
+}
+
 .main-form-header__title {
   font-family: @family-base;
   font-style: @style-base;
@@ -5,6 +23,8 @@
   font-size: 36px;
   line-height: 36px;
   color: @base-text-color;
+  margin: 0;
+  padding: 0;
 }
 
 .main-form-header__description {
