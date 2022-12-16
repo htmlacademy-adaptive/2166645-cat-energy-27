@@ -1,8 +1,38 @@
 .live-example {
+  min-width: 320px;
   background-color: @live-example-back-color;
-  padding-top: 25px;
-  padding-bottom: @value * 2;
-  .padding-horizontal(@value);
+
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+    background: linear-gradient(#ffffff 57%, @live-example-back-color 43%);
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1440px;
+    background: none;
+  }
+}
+
+.live-example__container {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0 auto;
+  padding: 25px @value 40px @value;
+  outline: 5px solid rgba(32, 9, 212, 0.8);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    display: grid;
+    grid-template-columns: 436px 560px;
+    column-gap: 224px;
+  }
 }
 
 .live-example__title {
@@ -11,6 +41,17 @@
   font-weight: inherit;
   font-size: 36px;
   line-height: @value * 2;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: #ffffff;
+    grid-column: 1 / 2;
+    padding: 0;
+    margin-left: 110px;
+  }
 }
 
 .live-example__description {
@@ -20,6 +61,42 @@
   font-size: 14px;
   line-height: 18px;
   color: @paragraph-text-color;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 2;
+    padding: 0;
+    margin-left: 110px;
+  }
+}
+
+.live-example__list-expenses-container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    outline: 5px solid rgba(243, 7, 133, 0.8);
+    outline-offset: -5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 2;
+    margin-left: 110px;
+    flex-direction: column;
+    margin-bottom: 75px;
+  }
+}
+
+.live-example__list {
+  display: grid;
+  grid-template-columns: repeat(2, 124px);
+  column-gap: 32px;
+  outline: 5px solid rgba(32, 9, 212, 0.8);
+  outline-offset: -5px;
 }
 
 .live-example__item-term {
@@ -29,6 +106,7 @@
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
+  grid-row: 1 / 2;
 }
 
 .live-example__item-description {
@@ -38,6 +116,7 @@
   font-size: 12px;
   line-height: 12px;
   color: @paragraph-text-color;
+  grid-row: 2 / 3;
 }
 
 .live-example__expenses {
@@ -47,4 +126,12 @@
   font-size: 14px;
   line-height: @value;
   text-transform: uppercase;
+}
+
+.live-example__slider {
+  display: flex;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 85px;
+  }
 }

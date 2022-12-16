@@ -1,11 +1,64 @@
 .for-dealers {
+  min-width: 320px;
+
   &--darker {
     background-color: @footer-back-color;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1440px;
+  }
+}
+
+.for-dealers__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
   }
 }
 
 .for-dealers__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 139px);
+  column-gap: 2px;
   .padding-horizontal(@value);
+  width: 280px;
+  margin: 0 auto;
+  outline: 5px solid rgba(0, 255, 0, 0.8);
+  outline-offset: -5px;
+  background-color: #ffffff;
+
+  &--darker {
+    background-color: @footer-back-color;
+
+    @media (min-width: @desktop-width) {
+      background-color: @button-text-color;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 548px;
+    .padding-horizontal(110px);
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 405px;
+    .padding-horizontal(80px);
+  }
 }
 
 .for-dealers__invitation {
@@ -13,9 +66,15 @@
   font-style: inherit;
   font-weight: inherit;
   font-size: 16px;
-  line-height: @line-base;
+  line-height: @value;
   text-transform: uppercase;
   color: @dealer-title-text-color;
+  outline: 5px solid rgba(8, 12, 8, 0.8);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    width: 172px;
+  }
 }
 
 .for-dealers__address {
@@ -23,6 +82,32 @@
   font-style: inherit;
   font-weight: inherit;
   font-size: 14px;
-  line-height: @line-base;
+  line-height: @value;
   color: @paragraph-text-color;
+  outline: 5px solid rgba(1, 73, 1, 0.8);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    width: 160px;
+  }
+}
+
+.for-dealers__map-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  background-color: @footer-back-color;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1440px;
+    margin: 0 auto;
+  }
 }

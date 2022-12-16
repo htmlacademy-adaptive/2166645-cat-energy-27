@@ -1,7 +1,23 @@
 .owner-contacts {
+  display: flex;
+  width: 280px;
+  padding: 0;
+  .padding-horizontal(@value);
+  padding-bottom: 24px;
+  margin: 0 auto;
   border: none;
   border-top: 2px solid @button-back-color;
-  padding-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    width: 632px;
+    .padding-horizontal(68px);
+    padding-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 0;
+  }
 }
 
 .owner-contacts__title {
@@ -9,6 +25,23 @@
   line-height: 26px;
   color: @base-text-color;
   text-transform: none;
+}
+
+.owner-contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 631px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 569px 572px;
+    column-gap: 78px;
+    width: 1219px;
+    padding: 76px 110px 67px 111px;
+  }
 }
 
 .owner-contacts__input {

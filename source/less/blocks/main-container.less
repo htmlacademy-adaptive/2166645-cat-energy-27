@@ -1,3 +1,33 @@
-/*.main-container {
+.main-container {
+  min-width: 320px;
+  margin: o auto;
+  padding: 0;
 
-}*/
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1440px;
+  }
+}
+
+.main-container__related-products-gift-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  outline: 5px solid rgba(237, 12, 12, 0.8);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

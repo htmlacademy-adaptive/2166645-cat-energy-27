@@ -1,10 +1,26 @@
 .gift {
-  .padding-horizontal(@value);
-  margin-bottom: 35px;
+  display: flex;
   background-color: @hero-back-color;
   background-image: url("../../../img/catalog/cat-gift.png");
   background-repeat: no-repeat;
+  width: 280px;
   height: 290px;
+  margin: 35px @value;
+
+  @media (min-width: @tablet-width) {
+    width: 707px;
+    height: 200px;
+    padding: 0;
+    margin: 69px 30px 76px 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 289px;
+    margin: 0;
+    margin-top: 130px;
+    margin-right: 110px;
+  }
 }
 
 .gift__suggestion {
