@@ -1,4 +1,8 @@
 .for-dealers {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
   min-width: 320px;
 
   &--darker {
@@ -15,16 +19,11 @@
 }
 
 .for-dealers__container {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   margin: 0 auto;
 
-  @media (min-width: @tablet-width) {
-    margin: 0 auto;
-  }
-
   @media (min-width: @desktop-width) {
-    margin: 0 auto;
+    width: 1440px;
   }
 }
 
@@ -49,13 +48,18 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    width: 548px;
-    .padding-horizontal(110px);
-    margin: 0 auto;
+    width: 628px;
+    .padding-horizontal(70px);
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   @media (min-width: @desktop-width) {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    top: 95px;
+    left: 110px;
     width: 405px;
     .padding-horizontal(80px);
   }
@@ -74,6 +78,14 @@
 
   @media (min-width: @tablet-width) {
     width: 172px;
+    font-size: @value;
+    line-height: 26px;
+    margin-top: 60px;
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 163px;
   }
 }
 
@@ -88,26 +100,38 @@
   outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
+    font-size: 16px;
+    text-align: end;
     width: 160px;
-  }
-}
-
-.for-dealers__map-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 320px;
-  background-color: @footer-back-color;
-  margin: 0 auto;
-
-  @media (min-width: @tablet-width) {
-    min-width: 768px;
-    margin: 0 auto;
+    margin-top: 56px;
+    margin-bottom: 63px;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 1440px;
-    margin: 0 auto;
+    text-align: start;
+    width: 155px;
+  }
+}
+
+.for-dealers__address br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.for-dealers__yandex-map {
+  display: block;
+  border: none;
+  width: 100%;
+  background-color: @footer-back-color;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
   }
 }

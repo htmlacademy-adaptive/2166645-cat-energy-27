@@ -22,6 +22,7 @@
 .main-nav__wrapper {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   height: 65px;
@@ -179,6 +180,7 @@
 
 .main-nav__item {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -196,8 +198,8 @@
     border: none;
     min-height: 24px;
     padding: 0;
-    padding-bottom: 18px;
     margin: 0;
+    margin-top: 18px;
 
     &--active::after {
       position: absolute;
@@ -211,7 +213,7 @@
 
   @media (min-width: @desktop-width) {
     min-height: 40px;
-    padding-bottom: 16px;
+    margin-top: 16px;
 
     &--active::after {
       background-color: @button-text-color;
@@ -261,10 +263,14 @@
   text-decoration: none;
   color: @base-text-color;
 
-  &:hover,
-  &:active {
+  & &:hover {
     opacity: 0.6;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
+
 
   @media (min-width: @tablet-width) {
     display: block;
