@@ -10,7 +10,7 @@
   @media (min-width: @tablet-width) {
     width: 708px;
     padding: 0 30px;
-    margin-bottom: 30px;
+    margin-bottom: 45px;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,9 +42,75 @@
 }
 
 .food-programs__item {
+  position: relative;
   outline: 5px solid rgba(246, 121, 4, 0.8);
   outline-offset: -5px;
   background-color: @footer-back-color;
+  padding-top: 30px;
+  padding-bottom: 22px;
+  .padding-horizontal(@value);
+
+  &--slim::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/cat-sit.svg");
+    width: 50px;
+    height: 50px;
+    top: 21px;
+    left: 22px;
+  }
+
+  &--pro::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/cat-walk.svg");
+    width: 67px;
+    height: 50px;
+    top: 24px;
+    left: 13px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 77px;
+    padding-bottom: 57px;
+    padding-left: 52px;
+    padding-right: 316px;
+
+    &--slim::before {
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 211px;
+      top: 81px;
+      left: 446px;
+    }
+
+    &--pro::before {
+      background-repeat: no-repeat;
+      width: 268px;
+      height: 200px;
+      top: 91px;
+      left: 412px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 59px;
+    padding-right: 61px;
+
+    &--slim::before {
+      width: 100px;
+      height: 106px;
+      top: 41px;
+      left: 52px;
+    }
+
+    &--pro::before {
+      width: 134px;
+      height: 100px;
+      top: 47px;
+      left: 33px;
+    }
+  }
 }
 
 .food-programs__block-title {
@@ -54,6 +120,25 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-left: 71px;
+  margin-bottom: 29px;
+  position: relative;
+  outline: 5px solid rgba(246, 121, 4, 0.8);
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-left: 1px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
 }
 
 .food-programs__description {
@@ -63,9 +148,27 @@
   font-size: 14px;
   line-height: 18px;
   color: @paragraph-text-color;
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 42px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    color: @base-text-color;
+    width: 340px;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 457px;
+    margin-bottom: 27px;
+  }
 }
 
 .food-programs__link-catalog-chapter {
+  position: relative;
   font-family: @family-base;
   font-style: @style-base;
   font-weight: @weight-base;
@@ -74,4 +177,55 @@
   text-transform: uppercase;
   color: @base-text-color;
   text-decoration: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.food-programs__link-catalog-chapter::before {
+  position: absolute;
+  content: "";
+  background-color: #d9d9d9;
+  width: 240px;
+  height: 1px;
+  top: -19px;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.food-programs__name {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  outline: 5px solid rgba(246, 121, 4, 0.8);
+  outline-offset: -5px;
+}
+
+.food-programs__name::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/arrow-right.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 25px;
+  }
+}
+
+.food-programs__link-catalog-chapter:active {
+  opacity: 0.3;
 }
