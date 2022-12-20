@@ -9,6 +9,22 @@
 
   @media (min-width: @desktop-width) {
     min-width: 1440px;
+
+    &--index {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 50%;
+        height: 694px;
+        top: -185px;
+        left: 50%;
+        background-image: linear-gradient(@hero-back-color, @hero-back-color);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
   }
 }
 
