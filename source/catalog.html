@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог: Кэт энерджи</title>
   <link href="css/style.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="page__body">
   <header class="main-header">
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--opened main-nav--nojs">
       <div class="main-nav__wrapper">
         <div class="main-nav__logo">
           <a class="main-nav__logo-link-icon logo-link-icon" href="./index.html">
@@ -28,12 +28,12 @@
         </button>
       </div>
       <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--active">
+        <li class="main-nav__item">
           <a class="main-nav__link" href="./index.html">
             Главная
           </a>
         </li>
-        <li class="main-nav__item">
+        <li class="main-nav__item main-nav__item--active">
           <a class="main-nav__link" href="/">
             Каталог продукции
           </a>
@@ -361,27 +361,25 @@
           Закажите все и получите чехол для кота в подарок!
         </p>
       </section>
-    </div>
-    <section class="for-dealers for-dealers--darker">
-      <h2 class="visually-hidden">
-        Приглашение к сотрудничеству
-      </h2>
-      <div class="for-dealers__container">
-        <div class="for-dealers__wrapper for-dealers__wrapper--darker">
-          <p class="for-dealers__invitation">
-            Приглашаем к сотрудничеству дилеров!
-          </p>
-          <p class="for-dealers__address">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-          </p>
+      <section class="for-dealers for-dealers--darker">
+        <h2 class="visually-hidden">
+          Приглашение к сотрудничеству
+        </h2>
+        <div class="for-dealers__container">
+          <div class="for-dealers__wrapper for-dealers__wrapper--darker">
+            <p class="for-dealers__invitation">
+              Приглашаем к сотрудничеству дилеров!
+            </p>
+            <p class="for-dealers__address">
+              ул. Большая Конюшенная, д. 19/8 <br class="for-dealers__breaker">
+              <br class="for-dealers__breaker"> Санкт-Петербург
+            </p>
+          </div>
         </div>
-        <div class="for-dealers__map-wrapper">
-          <img class="for-dealers__map" src="./img/map.jpg" width="320" height="362" alt="Карта.">
-          <img class="for-dealers__map-pin" src="./img/map-pin.png" width="57" height="53"
-            alt="Логотип кэт энерджи на карте, где офис.">
-        </div>
-      </div>
-    </section>
+        <iframe class="for-dealers__yandex-map" src="https://yandex.ru/map-widget/v1/-/CCUnF6EuwA" height="362"
+          title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург.">
+        </iframe>
+      </section>
   </main>
   <footer class="main-footer">
     <div class="main-footer__container">
@@ -442,7 +440,8 @@
       </div>
     </div>
   </footer>
-
+  <script src="./script.js">
+  </script>
 </body>
 
 </html>
