@@ -207,7 +207,7 @@
       position: absolute;
       content: "";
       height: 2px;
-      width: 64px;
+      width: 100%;
       background-color: #68b738;
       top: 32px;
     }
@@ -218,9 +218,11 @@
     margin-top: 16px;
 
     &--active::after {
-      background-color: @button-text-color;
-      width: 71px;
       top: 38px;
+    }
+
+    &--index-active::after {
+      background-color: @button-text-color;
     }
   }
 }
@@ -283,7 +285,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    color: @button-text-color;
+    &--index {
+      color: @button-text-color;
+    }
     font-size: @value;
     line-height: 30px;
   }
