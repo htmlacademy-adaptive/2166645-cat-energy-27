@@ -1,8 +1,46 @@
 .show-more-products {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
+.show-more-products__button-plus {
+  position: relative;
+  color: @button-text-color;
+  border: none;
+  background-color: @button-text-color;
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 23px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    width: 30px;
+    height: 2px;
+    background-color: #d3d3d3;
+    cursor: pointer;
+  }
+
+  &::before {
+    transform: translateX(-50%) rotate(0deg) translateY(50%);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: translateX(-50%) rotate(-90deg) translateY(50%);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(#d3d3d3, 30%);
+  }
+}
 
 .show-more-products__show-more {
   font-family: @family-base;
@@ -12,6 +50,10 @@
   line-height: @value;
   color: @dealer-title-text-color;
   text-transform: uppercase;
+  text-align: center;
+  outline: 5px solid rgba(255, 0, 0, 0.8);
+  outline-offset: -5px;
+  margin-bottom: 8px;
 }
 
 .show-more-products__description {
