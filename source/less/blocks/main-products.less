@@ -47,7 +47,6 @@
   border-bottom: 1px solid #ebebeb;
   display: grid;
   grid-template-columns: repeat(2, 140px);
-  row-gap: 13px;
   padding-top: 19px;
   padding-bottom: 25px;
   .padding-horizontal(@value);
@@ -58,7 +57,7 @@
     align-items: center;
     margin: 0;
     padding: 0;
-    padding-bottom: 39px;
+    padding-bottom: 38px;
     background-color: @footer-back-color;
     border: none;
   }
@@ -97,15 +96,16 @@
   grid-column: 2 / 3;
   display: block;
   margin: 0;
+  margin-bottom: 14px;
   padding: 0;
   width: 76px;
+  height: max-content;
 
   @media (min-width: @tablet-width) {
     font-size: @value;
     line-height: 24px;
     width: 150px;
     text-align: center;
-    margin-bottom: 14px;
   }
 
   @media (min-width: @desktop-width) {
@@ -178,10 +178,12 @@
   line-height: @value;
   grid-column: 1 / -1;
   height: 40px;
+  margin-top: 13px;
 
   @media (min-width: @tablet-width) {
     width: 248px;
     height: 40px;
+    margin-top: 0;
   }
 
   @media (min-width: @desktop-width) {

@@ -1,8 +1,4 @@
 .button {
-  &--show-all {
-    background-color: @footer-back-color;
-    color: @paragraph-text-color;
-  }
   font-family: @family-base;
   font-style: @style-base;
   font-weight: @weight-base;
@@ -20,5 +16,18 @@
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--show-all {
+    background-color: @footer-back-color;
+    color: @paragraph-text-color;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 }

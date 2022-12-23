@@ -3,6 +3,11 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    background-color: @button-text-color;
+    border: 2px solid #f2f2f2;
+  }
 }
 
 .show-more-products__button-plus {
@@ -11,29 +16,50 @@
   border: none;
   background-color: @button-text-color;
   display: block;
-  margin: 0;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
   padding: 0;
-  margin-bottom: 23px;
+  margin-bottom: 30px;
+  outline: 5px solid rgba(237, 12, 12, 0.8);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 131px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 130px;
+  }
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 25px;
+    top: 40px;
     left: 50%;
     width: 30px;
     height: 2px;
     background-color: #d3d3d3;
     cursor: pointer;
+
+    @media (min-width: @tablet-width) {
+      top: 82px;
+      width: 60px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 81px;
+    }
   }
 
   &::before {
-    transform: translateX(-50%) rotate(0deg) translateY(50%);
+    transform: translateX(-50%) rotate(0deg);
     box-shadow: none;
   }
 
   &::after {
-    transform: translateX(-50%) rotate(-90deg) translateY(50%);
+    transform: translateX(-50%) rotate(-90deg);
   }
 
   &:active::before,
@@ -51,9 +77,20 @@
   color: @dealer-title-text-color;
   text-transform: uppercase;
   text-align: center;
+  display: block;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 8px;
   outline: 5px solid rgba(255, 0, 0, 0.8);
   outline-offset: -5px;
-  margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    font-size: @value;
+    line-height: 22px;
+    width: 134px;
+    margin-top: 0;
+    margin-bottom: 23px;
+  }
 }
 
 .show-more-products__description {
@@ -63,4 +100,37 @@
   font-size: 12px;
   line-height: 16px;
   color: @paragraph-text-color;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  outline: 5px solid rgba(255, 0, 0, 0.8);
+  outline-offset: -5px;
+  margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    width: 165px;
+    margin-bottom: 87px;
+  }
+}
+
+.show-more-products__button-show-all {
+  width: 279px;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: @value;
+    width: 249px;
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 169px;
+    margin-bottom: 41px;
+  }
 }
