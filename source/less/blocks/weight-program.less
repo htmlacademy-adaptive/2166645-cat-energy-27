@@ -1,5 +1,6 @@
 .weight-program {
   width: 280px;
+  padding: 0;
   .padding-horizontal(@value);
   border: none;
   border-top: 1px solid #e7e7e7;
@@ -7,8 +8,111 @@
   color: @catalog-title-item;
   margin: 0;
   margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    width: 628px;
+    border: 1px solid #e7e7e7;
+    padding: 0;
+    margin-left: 71px;
+    margin-right: 67px;
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    margin: 0;
+    margin-bottom: 69px;
+  }
 }
 
 .weight-program__list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 28px;
+  padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
+
+.weight-program__item {
+  font-size: 16px;
+  line-height: 18px;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 23px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.weight-program__label {
+  position: relative;
+  display: block;
+  padding-left: 45px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
+}
+
+.weight-program__radio {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #cdcdcd;
+
+  @media (min-width: @tablet-width) {
+    top: -5px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.weight-program__input[type="radio"]:checked + .weight-program__radio::before {
+  position: absolute;
+  top: 8.5px;
+  left: 8.5px;
+  width: 13px;
+  height: 13px;
+  background-color: @button-back-color;
+  border-radius: 50%;
+  content: "";
+
+  @media (min-width: @tablet-width) {
+    top: 11px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.weight-program__label:hover .weight-program__radio {
+  border-color: #bababa;
+}
+
+.weight-program__input {
+  &:disabled + .weight-program__radio {
+    opacity: 0.3;
+  }
+
+  &:disabled + .weight-program__name {
+    opacity: 0.3;
+  }
+}
+
