@@ -17,6 +17,7 @@
 
   @media (min-width: @tablet-width) {
     width: 768px;
+    padding-bottom: 72px;
   }
 
   @media (min-width: @desktop-width) {
@@ -59,11 +60,27 @@
 }
 
 .form__button-send {
+  font-size: 16px;
+  line-height: @value;
+  height: 40px;
   margin-bottom: 21px;
 
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
+    font-size: @value;
+    line-height: 30px;
+    height: 52px;
     width: 282px;
     margin-right: 64px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -80,4 +97,17 @@
   line-height: 16px;
   color: @base-text-color;
   text-transform: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 280px;
+  text-align: center;
+  outline: 5px solid rgba(32, 9, 212, 0.8);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    text-align: start;
+    margin-top: 16px;
+  }
 }

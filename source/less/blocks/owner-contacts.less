@@ -6,7 +6,6 @@
   padding-bottom: 24px;
   margin: 0 auto;
   border: none;
-  border-top: 2px solid @button-back-color;
 
   @media (min-width: @tablet-width) {
     width: 632px;
@@ -21,10 +20,23 @@
 }
 
 .owner-contacts__title {
+  position: relative;
   font-size: 24px;
   line-height: 26px;
   color: @base-text-color;
   text-transform: none;
+  width: 187px;
+  margin-bottom: 35px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1000000%;
+    height: 2px;
+    background-color: @button-back-color;
+    top: 30%;
+    left: calc(100% + 14px);
+  }
 }
 
 .owner-contacts__wrapper {
@@ -44,6 +56,57 @@
   }
 }
 
+.owner-contacts__label {
+  display: flex;
+  width: 280px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.owner-contacts__label:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.owner-contacts__name {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-top: 14px;
+  margin-right: 10px;
+  outline: 5px solid rgba(24, 238, 249, 0.8);
+  outline-offset: -5px;
+}
+
+.owner-contacts__input-container {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  padding: 14px 16px 13px 15px;
+  border: 1px solid #cdcdcd;
+
+  //&--mail::before {
+  //position: absolute;
+  //  content: "";
+  // background-image: url("../../img/mail.svg");
+  //  background-repeat: no-repeat;
+  //  width: 17px;
+  //  height: 13px;
+  //  top: 16.5px;
+  //  right: 16px;
+  //}
+
+  &--phone::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/phone.svg");
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    top: 15px;
+    right: 15px;
+  }
+}
+
 .owner-contacts__input {
   &::placeholder {
     color: @paragraph-text-color;
@@ -54,4 +117,17 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  border: none;
+  box-sizing: border-box;
+  outline: 5px solid rgba(24, 238, 249, 0.8);
+  outline-offset: -5px;
+}
+
+.owner-contacts__icon-mail {
+  display: block;
+  padding: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 5px;
+  margin-right: 0;
 }

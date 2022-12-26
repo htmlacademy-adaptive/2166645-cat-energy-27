@@ -129,14 +129,22 @@
         </legend>
         <div class="owner-contacts__wrapper">
           <label class="owner-contacts__label" for="owner-email">
-            E-mail:*
-            <input class="owner-contacts__input" type="email" name="owner-email" id="owner-email"
-              placeholder="kuklachev@gmail.com">
+            <p class="owner-contacts__name">E-mail:*</p>
+            <div class="owner-contacts__input-container owner-contacts__input-container--mail">
+              <input class="owner-contacts__input" type="email" name="owner-email" id="owner-email"
+                placeholder="kuklachev@gmail.com">
+              <svg class="owner-contacts__icon-mail" width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M.5 5.5v8h17v-8M.5.5h17v2L9 8.5l-8.5-6v-2Z" stroke="#222" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
           </label>
           <label class="owner-contacts__label" for="owner-phone">
-            Телефон:*
-            <input class="owner-contacts__input" type="tel" name="owner-phone" id="owner-phone"
-              placeholder="8 (960) 900-60-90">
+            <p class="owner-contacts__name">Телефон:*</p>
+            <div class="owner-contacts__input-container owner-contacts__input-container--phone">
+              <input class="owner-contacts__input" type="tel" name="owner-phone" id="owner-phone"
+                placeholder="8 (960) 900-60-90">
+            </div>
           </label>
         </div>
       </fieldset>
@@ -154,7 +162,8 @@
         <ul class="additional-goods__list">
           <li class="additional-goods__item">
             <label class="additional-goods__label" for="sweetener">
-              <input class="visually-hidden additional-goods__input" type="checkbox" name="sweetener" id="sweetener" checked>
+              <input class="visually-hidden additional-goods__input" type="checkbox" name="sweetener" id="sweetener"
+                checked>
               <span class="additional-goods__mark">
               </span>
               <span class="additional-goods__name">
@@ -164,7 +173,8 @@
           </li>
           <li class="additional-goods__item">
             <label class="additional-goods__label" for="drink-water">
-              <input class="visually-hidden additional-goods__input" type="checkbox" name="drink-water" id="drink-water">
+              <input class="visually-hidden additional-goods__input" type="checkbox" name="drink-water"
+                id="drink-water">
               <span class="additional-goods__mark">
               </span>
               <span class="additional-goods__name">
@@ -198,11 +208,9 @@
         <button class="button form__button-send" type="submit">
           Отправить заявку
         </button>
-        <div class="form__remark">
-          <small class="form__required-fields">
-            * — Обязательные поля
-          </small>
-        </div>
+        <small class="form__required-fields">
+          * — Обязательные поля
+        </small>
       </div>
     </form>
     <section class="for-dealers for-dealers--darker">
