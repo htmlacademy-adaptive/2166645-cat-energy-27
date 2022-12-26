@@ -60,9 +60,6 @@
   width: 280px;
   margin: 0;
   padding: 0;
-  outline: 5px solid rgba(4, 11, 11, 0.8);
-  outline-offset: -5px;
-
 
   @media (min-width: @tablet-width) {
     width: 630px;
@@ -81,11 +78,6 @@
     color: @paragraph-text-color;
     outline: 5px solid rgba(24, 238, 249, 0.8);
     outline-offset: -5px;
-
-    @media (min-width: @tablet-width) {
-      font-size: @value;
-      line-height: 30px;
-    }
   }
   font-family: @family-base;
   font-style: @style-base;
@@ -104,13 +96,29 @@
   width: min-content;
   flex-wrap: wrap;
   border: 1px solid #e7e7e7;
-  outline: 5px solid rgba(253, 142, 16, 0.8);
-  outline-offset: -5px;
 
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus-within {
+    outline: 2px solid @paragraph-text-color;
+    outline-offset: -2px;
+  }
+
+  &--error {
+    outline: 2px solid #ff8282;
+    outline-offset: -2px;
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 11px;
     padding-bottom: 11px;
+
+    &::placeholder {
+      font-size: @value;
+      line-height: 30px;
+    }
   }
 }
 
