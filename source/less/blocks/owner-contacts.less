@@ -78,9 +78,10 @@
 }
 
 .owner-contacts__input-container {
-  position: relative;
+  //position: relative;
   flex-grow: 1;
   display: flex;
+  justify-content: space-between;
   padding: 14px 16px 13px 15px;
   border: 1px solid #cdcdcd;
 
@@ -95,16 +96,16 @@
   //  right: 16px;
   //}
 
-  &--phone::before {
-    position: absolute;
-    content: "";
-    background-image: url("../../img/phone.svg");
-    background-repeat: no-repeat;
-    width: 15px;
-    height: 15px;
-    top: 15px;
-    right: 15px;
-  }
+  //&--phone::before {
+  //  position: absolute;
+  //  content: "";
+  //  background-image: url("../../img/phone.svg");
+  //  background-repeat: no-repeat;
+  //  width: 15px;
+  //  height: 15px;
+  //  top: 15px;
+  //  right: 15px;
+  //}
 }
 
 .owner-contacts__input {
@@ -123,7 +124,7 @@
   outline-offset: -5px;
 }
 
-.owner-contacts__icon-mail {
+.owner-contacts__icon {
   display: block;
   padding: 0;
   margin-top: auto;
