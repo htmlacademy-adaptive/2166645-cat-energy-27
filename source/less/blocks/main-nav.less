@@ -15,13 +15,14 @@
 
   @media (min-width: @desktop-width) {
     width: 1220px;
-    padding: 53px 110px;
+    padding: 53px 110px 29px 110px;
   }
 }
 
 .main-nav__wrapper {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   height: 65px;
@@ -158,8 +159,8 @@
   margin: 0 auto;
   padding: 0;
   list-style-type: none;
-  outline: 5px solid rgba(67, 7, 79, 0.8);
-  outline-offset: -5px;
+  //outline: 5px solid rgba(67, 7, 79, 0.8);
+  //outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
     position: static;
@@ -173,12 +174,15 @@
   }
 
   @media (min-width: @desktop-width) {
+    background-color: transparent;
     width: 478px;
+    z-index: 1;
   }
 }
 
 .main-nav__item {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -196,14 +200,14 @@
     border: none;
     min-height: 24px;
     padding: 0;
-    padding-bottom: 18px;
     margin: 0;
+    margin-top: 18px;
 
     &--active::after {
       position: absolute;
       content: "";
       height: 2px;
-      width: 64px;
+      width: 100%;
       background-color: #68b738;
       top: 32px;
     }
@@ -211,12 +215,14 @@
 
   @media (min-width: @desktop-width) {
     min-height: 40px;
-    padding-bottom: 16px;
+    margin-top: 16px;
 
     &--active::after {
-      background-color: @button-text-color;
-      width: 71px;
       top: 38px;
+    }
+
+    &--index-active::after {
+      background-color: @button-text-color;
     }
   }
 }
@@ -261,9 +267,12 @@
   text-decoration: none;
   color: @base-text-color;
 
-  &:hover,
-  &:active {
+  &:hover {
     opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {
@@ -276,7 +285,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    color: @button-text-color;
+    &--index {
+      color: @button-text-color;
+    }
     font-size: @value;
     line-height: 30px;
   }

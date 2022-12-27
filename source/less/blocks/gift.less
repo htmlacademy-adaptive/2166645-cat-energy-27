@@ -1,25 +1,49 @@
 .gift {
+  position: relative;
   display: flex;
   background-color: @hero-back-color;
-  background-image: url("../../../img/catalog/cat-gift.png");
+  background-image: linear-gradient(@hero-back-color, @hero-back-color), url("../../../img/catalog/cat-gift.png");
   background-repeat: no-repeat;
   width: 280px;
   height: 290px;
   margin: 35px @value;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/icon_gift.svg");
+    width: 78px;
+    height: 80px;
+    background-repeat: no-repeat;
+    top: 59px;
+    left: 101px;
+  }
 
   @media (min-width: @tablet-width) {
     width: 707px;
     height: 200px;
     padding: 0;
     margin: 69px 30px 76px 31px;
+
+    &::before {
+      width: 80px;
+      height: 83px;
+      top: 57px;
+      left: 77px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
     height: 289px;
     margin: 0;
-    margin-top: 130px;
+    margin-top: 117px;
     margin-right: 110px;
+
+    &::before {
+      top: 56px;
+      left: 84px;
+    }
   }
 }
 
@@ -30,4 +54,19 @@
   font-size: 16px;
   line-height: @value;
   color: @button-text-color;
+  display: block;
+  width: 161px;
+  text-align: center;
+  margin: 0;
+  padding: 187px 61px 43px 58px;
+
+  @media (min-width: @tablet-width) {
+    text-align: start;
+    padding: 71px 124px 69px 422px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    padding: 185px 43px 42px 41px;
+  }
 }
