@@ -7,7 +7,7 @@
   <link href="css/style.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./img/favicons/favicon_apple.png"> <!-- 180×180 -->
+  <link rel="apple-touch-icon" href="./img/favicons/favicon-apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
@@ -17,12 +17,16 @@
     <nav class="main-nav main-nav--opened main-nav--nojs">
       <div class="main-nav__wrapper">
         <div class="main-nav__logo">
-          <a class="main-nav__logo-link-icon logo-link-icon" href="/">
-            <img class="logo-icon" src="./img/logo-mobile.svg" width="33" height="38"
-              alt="Логотип-картинка кэт энерджи.">
+          <a class="main-nav__logo-link-icon logo-link" href="/">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo-desktop.svg" width="202" height="59">
+              <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg" width="174" height="52">
+              <img class="logo-link__icon" src="./img/logo-mobile.svg" width="33" height="38"
+                alt="Логотип-картинка кэт энерджи.">
+            </picture>
           </a>
-          <a class="main-nav__logo-link-name logo-link-name" href="/">
-            <img class="logo-name" src="./img/logo-name.svg" width="101" height="18" alt="Логотип Кэт энерджи.">
+          <a class="main-nav__logo-link-name logo-link" href="/">
+            <img class="logo-link__name" src="./img/logo-name.svg" width="101" height="18" alt="Логотип Кэт энерджи.">
           </a>
         </div>
         <button class="main-nav__toggle" type="button">
@@ -193,8 +197,8 @@
           </p>
         </div>
       </div>
-      <iframe class="for-dealers__yandex-map" src="https://yandex.ru/map-widget/v1/-/CCUnF6EuwA" height="362"
-        title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург.">
+      <iframe class="for-dealers__yandex-map" src="https://yandex.ru/map-widget/v1/-/CCUnF6EuwA" width="100%"
+        height="362" title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург.">
       </iframe>
     </section>
   </main>

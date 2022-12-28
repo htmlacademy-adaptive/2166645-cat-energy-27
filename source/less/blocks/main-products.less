@@ -73,13 +73,20 @@
   display: block;
   margin: 0;
   padding: 0;
+  object-fit: contain;
+  width: 140px;
+  height: auto;
+  outline: 5px solid rgba(237, 12, 12, 0.8);
+  outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
+    width: 168px;
     margin-top: -73px;
     margin-bottom: 34px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 172px;
     margin-top: -80px;
     margin-bottom: 46px;
   }
