@@ -14,8 +14,12 @@
       <div class="main-nav__wrapper">
         <div class="main-nav__logo">
           <a class="main-nav__logo-link-icon logo-link-icon" href="./index.html">
-            <img class="logo-icon" src="./img/logo-mobile.svg" width="33" height="38"
-              alt="Логотип-картинка кэт энерджи.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo-desktop.svg" width="202" height="59">
+              <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg" width="174" height="52">
+              <img class="logo-link__icon" src="./img/logo-mobile.svg" width="33" height="38"
+                alt="Логотип-картинка кэт энерджи.">
+            </picture>
           </a>
           <a class="main-nav__logo-link-name logo-link-name" href="./index.html">
             <img class="logo-name" src="./img/logo-name.svg" width="101" height="18" alt="Логотип Кэт энерджи.">
@@ -64,19 +68,19 @@
           <ul class="main-database__list">
             <li class="main-database__item">
               <label class="main-database__label" for="cat-name">
-                <p class="main-database__name">Имя:*</p>
+                <span class="main-database__name">Имя:*</span>
                 <input class="main-database__input main-database__input--error" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
               </label>
             </li>
             <li class="main-database__item">
               <label class="main-database__label" for="cat-weight">
-                <p class="main-database__name">Вес (кг):*</p>
+                <span class="main-database__name">Вес (кг):*</span>
                 <input class="main-database__input main-database__input--error" type="number" name="cat-weight" id="cat-weight" placeholder="7">
               </label>
             </li>
             <li class="main-database__item">
               <label class="main-database__label" for="cat-age">
-                <p class="main-database__name">Возраст (лет):</p>
+                <span class="main-database__name">Возраст (лет):</span>
                 <input class="main-database__input main-database__input--error" type="number" name="cat-age" id="cat-age" placeholder="7">
               </label>
             </li>

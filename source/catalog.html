@@ -14,8 +14,12 @@
       <div class="main-nav__wrapper">
         <div class="main-nav__logo">
           <a class="main-nav__logo-link-icon logo-link-icon" href="./index.html">
-            <img class="logo-icon" src="./img/logo-mobile.svg" width="33" height="38"
-              alt="Логотип-картинка кэт энерджи.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo-desktop.svg" width="202" height="59">
+              <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg" width="174" height="52">
+              <img class="logo-link__icon" src="./img/logo-mobile.svg" width="33" height="38"
+                alt="Логотип-картинка кэт энерджи.">
+            </picture>
           </a>
           <a class="main-nav__logo-link-name logo-link-name" href="./index.html">
             <img class="logo-name" src="./img/logo-name.svg" width="101" height="18" alt="Логотип Кэт энерджи.">
@@ -56,31 +60,39 @@
       </h2>
       <ul class="main-products__list">
         <li class="main-products__item">
-          <img class="main-products__picture" src="./img/catalog/product-chicken-500g.png" width="140" height="112"
-            alt="Упаковка Cat Energy PRO 500 грамм с курицей.">
-          <p class="main-products__name">
-            Cat Energy PRO 500 г
-          </p>
-          <dl class="main-products__features">
-            <dt class="main-products__term">
-              Масса
-            </dt>
-            <dd class="main-products__description">
-              500 г
-            </dd>
-            <dt class="main-products__term">
-              Вкус
-            </dt>
-            <dd class="main-products__description">
-              Курица
-            </dd>
-            <dt class="main-products__term">
-              Цена
-            </dt>
-            <dd class="main-products__description">
-              700 ₽
-            </dd>
-          </dl>
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="./img/catalog/product-chicken-500g-desktop.png 1x, ./img/catalog/product-chicken-500g-desktop@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/catalog/product-chicken-500g-tablet.png 1x, ./img/catalog/product-chicken-500g-tablet@2x.png 2x">
+            <img class="main-products__picture" src="./img/catalog/product-chicken-500g.png" width="140" height="112"
+              srcset="./img/catalog/product-chicken-500g@2x.png 2x" alt="Упаковка Cat Energy PRO 500 грамм с курицей.">
+          </picture>
+          <div class="main-products__card-text-wrapper">
+            <p class="main-products__name">
+              Cat Energy PRO 500 г
+            </p>
+            <dl class="main-products__features">
+              <dt class="main-products__term">
+                Масса
+              </dt>
+              <dd class="main-products__description">
+                500 г
+              </dd>
+              <dt class="main-products__term">
+                Вкус
+              </dt>
+              <dd class="main-products__description">
+                Курица
+              </dd>
+              <dt class="main-products__term">
+                Цена
+              </dt>
+              <dd class="main-products__description">
+                700 ₽
+              </dd>
+            </dl>
+          </div>
           <button class="button main-products__order-button order-button" type="button">
             Заказать
           </button>

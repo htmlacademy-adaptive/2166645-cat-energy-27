@@ -2,7 +2,6 @@
   position: relative;
   outline: 5px solid rgba(32, 9, 212, 0.8);
   outline-offset: -5px;
-  //width: auto;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
@@ -10,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     width: 708px;
-    padding: 24px 30px;
+    padding: 0 30px 24px 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -54,6 +53,14 @@
   outline: 5px solid rgba(255, 0, 0, 0.8);
   outline-offset: -5px;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: @tablet-width) {
     margin: 0;
     width: 174px;
@@ -63,6 +70,20 @@
   @media (min-width: @desktop-width) {
     width: 202px;
     height: 59px;
+  }
+}
+
+.main-nav__logo-link-name {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
