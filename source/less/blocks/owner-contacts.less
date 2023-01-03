@@ -93,17 +93,50 @@
   color: @paragraph-text-color;
   display: flex;
   width: 280px;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   margin-top: auto;
   margin-bottom: auto;
   align-items: center;
+  position: relative;
+
+  &--mail::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/mail.svg");
+    background-repeat: no-repeat;
+    color: @catalog-title-item;
+    width: 18px;
+    height: 14px;
+    top: 16px;
+    right: 15px;
+  }
+
+  &--phone::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/phone.svg");
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    top: 15px;
+    right: 15px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: @value;
     line-height: 30px;
     width: 631px;
+
+    &--mail::after {
+      top: 19.5px;
+      right: 19.5px;
+    }
+
+    &--phone::after {
+      top: 18.5px;
+      right: 18.5px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -123,13 +156,20 @@
   }
 }
 
-.owner-contacts__input-container {
+.owner-contacts__input {
+  &::placeholder {
+    color: @paragraph-text-color;
+  }
+  font-family: @family-base;
+  font-style: @style-base;
+  font-weight: @weight-base;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @paragraph-text-color;
   flex-grow: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   margin-left: 10px;
-  padding: 14px 16px 13px 15px;
+  padding: 14px 43px 13px 15px;
   border: 1px solid #e7e7e7;
 
   &:hover {
@@ -147,29 +187,10 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-left: 20px;
-    padding: 11px 20px 11px 20px;
-  }
-}
-
-.owner-contacts__input {
-  &::placeholder {
-    color: @paragraph-text-color;
-  }
-  font-family: @family-base;
-  font-style: @style-base;
-  font-weight: @weight-base;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  border: none;
-  flex-grow: 1;
-  outline: 5px solid rgba(24, 238, 249, 0.8);
-  outline-offset: -5px;
-
-  @media (min-width: @tablet-width) {
     font-size: @value;
     line-height: 30px;
+    margin-left: 20px;
+    padding: 11px 48px 11px 20px;
   }
 }
 

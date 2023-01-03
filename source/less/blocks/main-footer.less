@@ -53,6 +53,18 @@
   }
 }
 
+.main-footer__logo-name {
+  color: @dealer-title-text-color;
+
+  &:hover {
+    color: #3e3e3e;
+  }
+
+  &:active {
+    color: #6b6b6b;
+  }
+}
+
 .main-footer__social-list {
   list-style-type: none;
   display: flex;
@@ -78,6 +90,18 @@
   margin-right: 24px;
 }
 
+.main-footer__social-icon {
+  color: #666666;
+
+  &:hover {
+    color: @button-back-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .main-footer__htmlacademy {
   display: flex;
   width: 281px;
@@ -88,13 +112,31 @@
   outline: 5px solid rgba(32, 9, 212, 0.8);
   outline-offset: -5px;
 
-  &:active {
-    opacity: 0.3;
-  }
-
   @media (min-width: @tablet-width) {
     width: 163px;
     margin: 0;
     padding: 0;
+  }
+}
+
+.htmlacademy__link-name {
+  color: @paragraph-text-color;
+  outline: 5px solid rgba(248, 14, 22, 0.8);
+  outline-offset: -5px;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.htmlacademy__icon {
+  color: #666666;
+
+  &:hover {
+    color: @button-back-color;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
