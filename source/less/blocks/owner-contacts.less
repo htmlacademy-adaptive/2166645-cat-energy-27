@@ -160,20 +160,17 @@
   }
 }
 
-.owner-contacts__icon path {
-  stroke: @catalog-title-item;
-}
-
 .owner-contacts__icon {
   padding: 0;
   margin: auto 0;
   margin-left: -18px;
+  color: @catalog-title-item;
 
-  &--error path {
-    stroke: #ff8282;
+  &--error {
+    color: #ff8282;
   }
 }
 
-.owner-contacts__label:focus-within .owner-contacts__icon path {
-  stroke: @button-back-color;
+.owner-contacts__label:focus-within .owner-contacts__icon {
+  color: @button-back-color;
 }
