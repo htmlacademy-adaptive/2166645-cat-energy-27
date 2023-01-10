@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   background-color: @hero-back-color;
-  background-image: linear-gradient(@hero-back-color, @hero-back-color), url("../../../img/catalog/cat-gift.png");
+  background-image: linear-gradient(@hero-back-color, @hero-back-color), url("../../../../img/catalog/cat-gift.png");
   background-repeat: no-repeat;
   width: 280px;
   height: 290px;
@@ -11,7 +11,7 @@
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../../img/icon_gift.svg");
+    background-image: url("../../../../img/icon_gift.svg");
     width: 78px;
     height: 80px;
     background-repeat: no-repeat;
@@ -20,6 +20,9 @@
   }
 
   @media (min-width: @tablet-width) {
+    background-size: 100%;
+    background-position: 0 -320px;
+    //background-image: linear-gradient(@hero-back-color, @hero-back-color), url("../../../../img/catalog/cat-gift-tablet.png");
     width: 707px;
     height: 200px;
     padding: 0;
@@ -34,6 +37,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    background-size: auto;
+    background-position: -34px 0;
     width: 245px;
     height: 289px;
     margin: 0;

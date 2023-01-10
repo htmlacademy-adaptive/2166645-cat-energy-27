@@ -282,13 +282,29 @@
   width: 280px;
 
   @media (min-width: @tablet-width) {
+    width: 560px;
+    height: 512px;
     margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 2 / 3;
-    grid-row: 1 / 3; //сделать с 1 / -1
+    grid-row: 1 / 4;
     margin-bottom: 10px;
+  }
+}
+
+.live-example__slider-left-photo {
+  @media (min-width: @tablet-width) {
+    width: 280px;
+    height: 512px;
+  }
+}
+
+.live-example__slider-right-photo{
+  @media (min-width: @tablet-width) {
+    width: 280px;
+    height: 512px;
   }
 }
 
