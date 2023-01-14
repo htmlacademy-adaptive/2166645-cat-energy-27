@@ -294,20 +294,6 @@
   }
 }
 
-.live-example__slider::before {
-  position: absolute;
-  content: "";
-  width: 4px;
-  height: 256px;
-  background-color: #666666;
-  left: 50%;
-  transform: translateX(-50%);
-
-  @media (min-width: @tablet-width) {
-    height: 512px;
-  }
-}
-
 .live-example__slider-left-photo {
   @media (min-width: @tablet-width) {
     width: 280px;
@@ -322,7 +308,35 @@
   }
 }
 
-.live-example__slider-icon {
+.live-example__wrapper-slider-button {
+  position: absolute;
+  content: "";
+  left: 50%;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 256px;
+    background-color: #666666;
+    left: 0;
+    transform: translateX(-50%);
+
+    @media (min-width: @tablet-width) {
+      height: 512px;
+    }
+  }
+
+  &:hover::before {
+    background-color: @button-back-color;
+  }
+
+  &:active::before {
+    background-color: rgba(94, 170, 47, 0.6);
+  }
+}
+
+.live-example__slider-button {
   position: absolute;
   content: "";
   background-color: @button-text-color;
@@ -330,7 +344,7 @@
   height: 40px;
   border-radius: 50%;
   border: 2px solid #666666;
-  top: 50%;
+  top: 128px;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 
@@ -358,27 +372,31 @@
     transform: translateX(-50%) translateY(-50%);
   }
 
-  &:hover {
-    border-color: @button-back-color;
+  @media (min-width: @tablet-width) {
+    top: 256px;
   }
+}
 
-  &:hover::before {
-    border-right-color: @button-back-color;
-  }
+.live-example__wrapper-slider-button:hover .live-example__slider-button {
+  border-color: @button-back-color;
+}
 
-  &:hover::after {
-    border-left-color: @button-back-color;
-  }
+.live-example__wrapper-slider-button:hover .live-example__slider-button::before {
+  border-right-color: @button-back-color;
+}
 
-  &:active {
-    border-color: rgba(94, 170, 47, 0.6);
-  }
+.live-example__wrapper-slider-button:hover .live-example__slider-button::after {
+  border-left-color: @button-back-color;
+}
 
-  &:active::before {
-    border-right-color: rgba(94, 170, 47, 0.6);
-  }
+.live-example__wrapper-slider-button:active .live-example__slider-button {
+  border-color: rgba(94, 170, 47, 0.6);
+}
 
-  &:active::after {
-    border-left-color: rgba(94, 170, 47, 0.6);
-  }
+.live-example__wrapper-slider-button:active .live-example__slider-button::before {
+  border-right-color: rgba(94, 170, 47, 0.6);
+}
+
+.live-example__wrapper-slider-button:active .live-example__slider-button::after {
+  border-left-color: rgba(94, 170, 47, 0.6);
 }

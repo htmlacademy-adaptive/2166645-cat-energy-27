@@ -58,7 +58,7 @@ return gulp.src('source/img/**/*.{png,jpg}')
 // WebP
 
 const createWebp = () => {
-return gulp.src('source/img/**/*.{png,jpg}')
+return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/background/**/*.{png,jpg}'])
 .pipe(squoosh({
 webp: {}
 }))
@@ -88,6 +88,7 @@ const copy = (done) => {
 gulp.src([
 'source/fonts/*.{woff2,woff}',
 'source/*.ico',
+'source/*.webmanifest',
 ], {
 base: 'source'
 })

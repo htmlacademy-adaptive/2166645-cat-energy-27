@@ -90,6 +90,7 @@
 }
 
 .owner-contacts__label {
+  position: relative;
   color: @paragraph-text-color;
   display: flex;
   width: 280px;
@@ -114,7 +115,7 @@
   margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: @value;
   }
 
   @media (min-width: @desktop-width) {
@@ -161,13 +162,19 @@
 }
 
 .owner-contacts__icon {
-  padding: 0;
-  margin: auto 0;
-  margin-left: -18px;
+  position: absolute;
+  content: "";
+  right: 15px;
+  top: auto;
+  fill: none;
   color: @catalog-title-item;
 
   &--error {
     color: #ff8282;
+  }
+
+  @media (min-width: @tablet-width) {
+    right: 19px;
   }
 }
 
