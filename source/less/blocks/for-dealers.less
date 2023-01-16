@@ -31,12 +31,10 @@
   display: grid;
   grid-template-columns: repeat(2, 139px);
   column-gap: 2px;
-  .padding-horizontal(@value);
+  padding: 26px @value 26px @value;
   width: 280px;
   margin: 0 auto;
-  outline: 5px solid rgba(0, 255, 0, 0.8);
-  outline-offset: -5px;
-  background-color: #ffffff;
+  background-color: @button-text-color;
 
   &--darker {
     background-color: @footer-back-color;
@@ -49,7 +47,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     width: 628px;
-    .padding-horizontal(70px);
+    padding: 56px 70px 56px 70px;
     justify-content: space-between;
     flex-wrap: wrap;
   }
@@ -73,15 +71,13 @@
   line-height: @value;
   text-transform: uppercase;
   color: @dealer-title-text-color;
-  outline: 5px solid rgba(8, 12, 8, 0.8);
-  outline-offset: -5px;
+  margin: 0;
+  margin-top: 4px;
 
   @media (min-width: @tablet-width) {
     width: 172px;
     font-size: @value;
     line-height: 26px;
-    margin-top: 60px;
-    margin-bottom: 56px;
   }
 
   @media (min-width: @desktop-width) {
@@ -96,15 +92,14 @@
   font-size: 14px;
   line-height: @value;
   color: @paragraph-text-color;
-  outline: 5px solid rgba(1, 73, 1, 0.8);
-  outline-offset: -5px;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     text-align: end;
     width: 160px;
-    margin-top: 56px;
-    margin-bottom: 63px;
+    padding: 0;
+    margin-bottom: 7px;
   }
 
   @media (min-width: @desktop-width) {

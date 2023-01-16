@@ -149,15 +149,15 @@
   }
 
   &--error {
-    outline: 2px solid #ff8282;
+    outline: 2px solid @error;
     outline-offset: -2px;
   }
 
   @media (min-width: @tablet-width) {
     font-size: @value;
     line-height: 30px;
-    margin-left: 20px;
-    padding: 11px 48px 11px 20px;
+    margin-left: @value;
+    padding: 11px 48px 11px @value;
   }
 }
 
@@ -170,7 +170,7 @@
   color: @catalog-title-item;
 
   &--error {
-    color: #ff8282;
+    color: @error;
   }
 
   @media (min-width: @tablet-width) {
