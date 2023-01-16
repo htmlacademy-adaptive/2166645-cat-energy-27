@@ -9,7 +9,7 @@
   @media (min-width: @tablet-width) {
     width: 708px;
     padding: 0 30px;
-    padding-bottom: 38px;
+    padding-bottom: 42px;
     border-bottom: 1px solid #e6e6e6;
   }
 
@@ -17,7 +17,7 @@
     width: 1224px;
     padding-left: 110px;
     padding-right: 106px;
-    padding-bottom: 126px;
+    padding-bottom: 122px;
     border-bottom: none;
   }
 }
@@ -37,6 +37,10 @@
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 182px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 181px;
   }
 }
 
@@ -152,6 +156,29 @@
       left: 0;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      top: -147px;
+      left: max(47%);
+    }
+
+    &--leaf::before {
+      top: calc(-100% - 30px);
+    }
+
+    &--powder::before {
+      top: calc(-100% - 30px);
+    }
+
+    &--eat::before {
+      top: calc(-100% - 30px);
+    }
+
+    &--clocks::before {
+      top: calc(-100% - 30px);
+    }
+  }
 }
 
 .food-instruction__step-description {
@@ -164,9 +191,9 @@
   display: block;
   margin: 0;
   padding: 0;
-  padding-top: 0;
+  padding-top: 2px;
   padding-left: 81px;
-  padding-bottom: 6px;
+  padding-bottom: 4px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;

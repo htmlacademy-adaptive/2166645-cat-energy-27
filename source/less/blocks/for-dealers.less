@@ -58,8 +58,9 @@
     z-index: 1;
     top: 95px;
     left: 110px;
-    width: 405px;
-    .padding-horizontal(80px);
+    width: 425px;
+    padding-left: 80px;
+    padding-right: 60px;
   }
 }
 
@@ -72,12 +73,12 @@
   text-transform: uppercase;
   color: @dealer-title-text-color;
   margin: 0;
-  margin-top: 4px;
 
   @media (min-width: @tablet-width) {
     width: 172px;
     font-size: @value;
     line-height: 26px;
+    margin-top: 4px;
   }
 
   @media (min-width: @desktop-width) {
@@ -104,7 +105,7 @@
 
   @media (min-width: @desktop-width) {
     text-align: start;
-    width: 155px;
+    width: 175px;
   }
 }
 
@@ -113,10 +114,6 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
   }
 }
 
