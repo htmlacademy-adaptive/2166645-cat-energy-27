@@ -44,7 +44,7 @@
     font-size: 36px;
     line-height: 36px;
     width: 515px;
-    margin-bottom: 76px;
+    margin-bottom: 75px;
 
     &::before {
       position: absolute;
@@ -52,17 +52,19 @@
       width: 1000000%;
       height: 2px;
       background-color: @button-back-color;
-      top: 65%;
+      top: 60%;
       right: calc(100% + 39px);
     }
 
     &::after {
-      top: 65%;
+      top: 60%;
       left: calc(100% + 42px);
     }
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 75px;
+
     &::before {
       right: calc(100% + 40px);
     }
@@ -105,6 +107,7 @@
     font-size: @value;
     line-height: 30px;
     width: 631px;
+    padding-left: 2px;
   }
 
   @media (min-width: @desktop-width) {
@@ -116,7 +119,7 @@
   margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: @value;
+    margin-bottom: 19px;
   }
 
   @media (min-width: @desktop-width) {
@@ -159,6 +162,10 @@
     line-height: 30px;
     margin-left: @value;
     padding: 11px 48px 11px @value;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 10px;
   }
 }
 

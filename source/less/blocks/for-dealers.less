@@ -38,10 +38,6 @@
 
   &--darker {
     background-color: @footer-back-color;
-
-    @media (min-width: @desktop-width) {
-      background-color: @button-text-color;
-    }
   }
 
   @media (min-width: @tablet-width) {
@@ -59,8 +55,17 @@
     top: 95px;
     left: 110px;
     width: 405px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-top: 54px;
+    .padding-horizontal(80px);
+
+    &--darker {
+      background-color: @button-text-color;
+    }
+
+    &--catalog {
+      padding-top: 56px;
+      padding-bottom: 35px;
+    }
   }
 }
 
@@ -82,7 +87,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 163px;
+    width: 170px;
   }
 }
 
@@ -105,7 +110,11 @@
 
   @media (min-width: @desktop-width) {
     text-align: start;
-    width: 155px;
+    width: 157px;
+
+    &--with-breakers {
+      width: 155px;
+    }
   }
 }
 
@@ -117,13 +126,15 @@
   }
 }
 
-.for-dealers__address .for-dealers__breaker--catalog-desktop-no {
+.for-dealers__address .for-dealers__breaker--desktop-no {
   @media (min-width: @desktop-width) {
     display: none;
   }
 }
 
-.for-dealers__address .for-dealers__breaker--catalog-desktop-yes {
+.for-dealers__address .for-dealers__breaker--desktop-yes {
+  display: none;
+
   @media (min-width: @desktop-width) {
     display: block;
   }
