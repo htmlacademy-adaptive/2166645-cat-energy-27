@@ -2,11 +2,11 @@
   display: flex;
   flex-direction: column;
   width: 280px;
-  padding: 0;
   margin: 0;
+  padding-top: 0;
   .padding-horizontal(@value);
-  border: none;
   padding-bottom: 41px;
+  border: none;
 
   @media (min-width: @tablet-width) {
     width: 628px;
@@ -158,6 +158,10 @@
 
 .additional-goods__label:hover .additional-goods__mark {
   border-color: #bababa;
+}
+
+.additional-goods__label:focus-within .additional-goods__mark {
+  border: 2px solid @paragraph-text-color;
 }
 
 .additional-goods__input {

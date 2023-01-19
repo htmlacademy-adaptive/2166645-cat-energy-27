@@ -12,23 +12,7 @@
 
 .show-more-products__button-plus {
   position: relative;
-  color: @button-text-color;
-  border: none;
-  background-color: @button-text-color;
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
-  padding: 0;
-  margin-bottom: 30px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 131px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 130px;
-  }
+  text-decoration: none;
 
   &::before,
   &::after {
@@ -82,15 +66,19 @@
   text-align: center;
   display: block;
   margin: 0;
-  margin-top: @value;
+  margin-top: 78px;
   margin-bottom: 8px;
 
   @media (min-width: @tablet-width) {
     font-size: @value;
     line-height: 22px;
     width: 134px;
-    margin-top: 0;
+    margin-top: 161px;
     margin-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 160px;
   }
 }
 
@@ -116,20 +104,21 @@
 }
 
 .show-more-products__button-show-all {
-  width: 279px;
-  height: 40px;
+  width: 260px;
+  text-align: center;
+  padding: 10px;
   margin: 0 auto;
   margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: @value;
-    width: 249px;
+    width: 229px;
     margin-bottom: 39px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 169px;
+    width: 149px;
     margin-bottom: 41px;
   }
 }
