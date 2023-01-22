@@ -30,13 +30,17 @@
   margin: 0;
   padding: 0;
   padding-top: 28px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
 
   @media (min-width: @tablet-width) {
     padding-left: 28px;
     padding-right: 28px;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 28px;
   }
 }
 
@@ -53,7 +57,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    font-size: 20px;
+    font-size: @value;
     line-height: 30px;
   }
 }
@@ -72,22 +76,22 @@
   position: absolute;
   top: -6px;
   left: 0;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   border: 1px solid #cdcdcd;
 
   @media (min-width: @tablet-width) {
     top: -5px;
-    width: 40px;
-    height: 40px;
+    width: 37px;
+    height: 37px;
   }
 }
 
 .weight-program__input[type="radio"]:checked + .weight-program__radio::before {
   position: absolute;
-  top: 8.5px;
-  left: 8.5px;
+  top: 7.5px;
+  left: 7.5px;
   width: 13px;
   height: 13px;
   background-color: @button-back-color;
@@ -95,15 +99,19 @@
   content: "";
 
   @media (min-width: @tablet-width) {
-    top: 11px;
-    left: 11px;
-    width: 18px;
-    height: 18px;
+    top: 10.5px;
+    left: 10.5px;
+    width: 16px;
+    height: 16px;
   }
 }
 
 .weight-program__label:hover .weight-program__radio {
   border-color: #bababa;
+}
+
+.weight-program__label:focus-within .weight-program__radio {
+  border: 2px solid @paragraph-text-color;
 }
 
 .weight-program__input {

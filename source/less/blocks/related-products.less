@@ -24,14 +24,14 @@
   padding: 0;
   padding-left: @value;
   margin-top: 25px;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
 
   &::after {
     position: absolute;
     content: "";
     width: 1000000%;
     height: 2px;
-    background-color: #68b738;
+    background-color: @button-back-color;
     top: 65%;
     left: calc(100% + 21px);
   }
@@ -50,19 +50,20 @@
       content: "";
       width: 1000000%;
       height: 2px;
-      background-color: #68b738;
-      top: 65%;
+      background-color: @button-back-color;
+      top: 63%;
       right: calc(100% + 37px);
     }
 
     &::after {
+      top: 62%;
       left: calc(100% + 36px);
     }
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 110px;
-    margin-bottom: 81px;
+    margin-bottom: 79px;
 
     &::before {
       right: calc(100% + 40px);
@@ -83,15 +84,15 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 708px;
-    padding: 0 30px;
+    width: 710px;
+    padding: 0 29px;
   }
 
   @media (min-width: @desktop-width) {
     width: 895px;
     padding: 0;
     margin-right: 79px;
-    margin-bottom: 86px;
+    margin-bottom: 85px;
     margin-left: 111px;
   }
 }
@@ -108,6 +109,7 @@
     width: 632px;
     grid-template-columns: 360px 241px;
     column-gap: 31px;
+    row-gap: 21px;
     .padding-horizontal(38px);
     padding-bottom: 28px;
     border: 1px solid #cdcdcd;
@@ -115,8 +117,8 @@
 
   @media (min-width: @desktop-width) {
     width: 895px;
-    grid-template-columns: 286px 285px 244px;
-    column-gap: 40px;
+    grid-template-columns: 286px 287px 244px;
+    column-gap: 38px;
     padding: 0;
     border-left: none;
     border-right: none;
@@ -146,20 +148,20 @@
   display: block;
   margin: 0;
   padding: 0;
-  padding-top: 13px;
+  padding-top: 12px;
   padding-bottom: 13px;
 
   @media (min-width: @tablet-width) {
     font-size: @value;
     line-height: @value;
     margin: 0;
-    padding-top: 26px;
-    padding-bottom: 25px;
+    padding-top: 27px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 25px;
-    padding-bottom: 27px;
+    padding-bottom: 23px;
   }
 }
 
@@ -181,11 +183,11 @@
     font-size: 16px;
     line-height: @value;
     display: grid;
-    grid-template-columns: 150px 62px;
-    column-gap: 29px;
+    grid-template-columns: 147px 59px;
+    column-gap: 33px;
     width: 241px;
-    padding-top: 29px;
-    padding-bottom: 23px;
+    padding-top: 28px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -195,7 +197,7 @@
     padding: 0;
     justify-content: space-between;
     padding-top: 28px;
-    padding-bottom: 24px;
+    padding-bottom: 21px;
   }
 }
 
@@ -204,6 +206,7 @@
     display: block;
     margin: 0;
     padding: 0;
+    padding-bottom: 2px;
     text-align: end;
   }
 }
@@ -213,7 +216,16 @@
     display: block;
     margin: 0;
     padding: 0;
+    padding-right: 3px;
     text-align: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+
+    &--min-price {
+      padding-right: 9px;
+    }
   }
 }
 
@@ -222,19 +234,18 @@
   line-height: @value;
   display: block;
   text-align: center;
-  width: 280px;
-  height: 40px;
-
+  width: 260px;
+  padding: 10px;
 
   @media (min-width: @tablet-width) {
     grid-column: 1 / -1;
-    width: 632px;
+    width: 612px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 3 / -1;
-    width: 244px;
+    width: 224px;
     margin-top: 15px;
-    margin-bottom: 17px;
+    margin-bottom: 14px;
   }
 }

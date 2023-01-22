@@ -4,7 +4,7 @@
 
   @media (min-width: @tablet-width) {
     min-width: 768px;
-    background: linear-gradient(#ffffff 57%, @live-example-back-color 43%);
+    background: linear-gradient(@button-text-color 57%, @live-example-back-color 43%);
   }
 
   @media (min-width: @desktop-width) {
@@ -17,7 +17,7 @@
       content: "";
       width: 100%;
       height: 462px;
-      background-color: #f2f2f2;
+      background-color: @footer-back-color;
       top: 136px;
       z-index: -1;
     }
@@ -29,20 +29,18 @@
   flex-direction: column;
   width: 280px;
   margin: 0 auto;
-  padding: 25px @value 40px @value;
-  outline: 5px solid rgba(32, 9, 212, 0.8);
-  outline-offset: -5px;
+  padding: 25px @value 37px @value;
 
   @media (min-width: @tablet-width) {
     width: 708px;
-    padding: 43px 30px 101px 30px;
+    padding: 43px 30px 100px 31px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1220px;
     display: grid;
-    grid-template-columns: 436px 560px;
-    column-gap: 224px;
+    grid-template-columns: 432px 560px;
+    column-gap: 228px;
     padding: 0 110px 75px 110px;
   }
 }
@@ -52,7 +50,7 @@
   font-style: inherit;
   font-weight: inherit;
   font-size: 36px;
-  line-height: @value * 2;
+  line-height: 40px;
   display: block;
   margin: 0;
   padding: 0;
@@ -68,7 +66,7 @@
     grid-column: 1 / 2;
     padding: 0;
     margin: 0;
-    margin-bottom: 146px;
+    margin-bottom: 145px;
   }
 }
 
@@ -81,21 +79,19 @@
   color: @paragraph-text-color;
   display: block;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: @value;
   padding: 0;
-  outline: 5px solid rgba(32, 9, 212, 0.8);
-  outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 65px;
+    margin-bottom: 67px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 1 / 2;
     padding: 0;
-    margin-bottom: 84px;
+    margin-bottom: 83px;
   }
 }
 
@@ -106,8 +102,6 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 99px;
-    outline: 5px solid rgba(243, 7, 133, 0.8);
-    outline-offset: -5px;
   }
 
   @media (min-width: @desktop-width) {
@@ -124,15 +118,14 @@
   display: grid;
   grid-template-columns: repeat(2, 124px);
   column-gap: 32px;
-  row-gap: 10px;
-  outline: 5px solid rgba(32, 9, 212, 0.8);
-  outline-offset: -5px;
+  row-gap: 7.5px;
+  margin-bottom: 19px;
 
   &::before {
     position: absolute;
     content: "";
-    width: 124px;
-    height: 56px;
+    width: 123px;
+    height: 54px;
     background-color: transparent;
     border: 1px solid #cdcdcd;
     top: -15px;
@@ -142,8 +135,8 @@
   &::after {
     position: absolute;
     content: "";
-    width: 124px;
-    height: 56px;
+    width: 122px;
+    height: 54px;
     background-color: transparent;
     border: 1px solid #cdcdcd;
     top: -15px;
@@ -153,24 +146,24 @@
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 162px);
     column-gap: 42px;
-    row-gap: 11px;
+    row-gap: 10px;
     margin: 0;
 
     &::before {
-      width: 162px;
-      height: 72px;
+      width: 160px;
+      height: 70px;
       background-color: transparent;
       border: 1px solid #cdcdcd;
-      top: -15px;
+      top: -13px;
       left: 0;
     }
 
     &::after {
-      width: 162px;
-      height: 72px;
+      width: 160px;
+      height: 70px;
       background-color: transparent;
       border: 1px solid #cdcdcd;
-      top: -15px;
+      top: -13px;
       right: 0;
     }
   }
@@ -212,7 +205,7 @@
   margin-right: 19px;
   width: 59px;
   text-align: center;
-  background-color: #eaeaea;
+  background-color: @live-example-back-color;
   z-index: 2;
 
   @media (min-width: @tablet-width) {
@@ -240,9 +233,6 @@
   display: block;
   padding: 0;
   margin: 0;
-  margin-bottom: @value;
-  outline: 5px solid rgba(32, 9, 212, 0.8);
-  outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
     font-size: @value;
@@ -265,12 +255,15 @@
 .live-example__expenses-title {
   @media (min-width: @tablet-width) {
     display: block;
+    align-self: flex-start;
     margin: 0;
     padding: 0;
+    margin-top: -1px;
     margin-bottom: 9px;
   }
 
   @media (min-width: @desktop-width) {
+    padding-left: 2px;
     margin-bottom: 0;
   }
 }
@@ -280,6 +273,8 @@
   display: flex;
   justify-content: space-between;
   width: 280px;
+  padding: 0;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     width: 560px;

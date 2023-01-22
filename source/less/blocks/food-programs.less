@@ -4,8 +4,6 @@
   margin: 0 auto;
   margin-bottom: @value;
   padding: 0 @value;
-  outline: 5px solid rgba(21, 23, 21, 0.8);
-  outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
     width: 708px;
@@ -27,8 +25,6 @@
   row-gap: @value;
   margin: 0 auto;
   padding: 0;
-  outline: 5px solid rgba(246, 242, 4, 0.8);
-  outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 708px;
@@ -43,8 +39,6 @@
 
 .food-programs__item {
   position: relative;
-  outline: 5px solid rgba(246, 121, 4, 0.8);
-  outline-offset: -5px;
   background-color: @footer-back-color;
   padding-top: 30px;
   padding-bottom: 22px;
@@ -126,7 +120,6 @@
   padding-left: 71px;
   margin-bottom: 29px;
   position: relative;
-  outline: 5px solid rgba(246, 121, 4, 0.8);
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -182,7 +175,7 @@
   padding: 0;
 
   @media (min-width: @tablet-width) {
-    font-size: 20px;
+    font-size: @value;
     line-height: 30px;
   }
 }
@@ -206,8 +199,6 @@
   display: block;
   padding: 0;
   margin: 0;
-  outline: 5px solid rgba(246, 121, 4, 0.8);
-  outline-offset: -5px;
 
   &::after {
     position: absolute;
@@ -224,7 +215,11 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-left: 25px;
+    margin-left: 1px;
+
+    &::after {
+      margin-left: 25px;
+    }
   }
 }
 

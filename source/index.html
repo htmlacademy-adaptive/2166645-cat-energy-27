@@ -4,11 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="./css/style.min.css" as="style">
+  <link rel="preload" href="./fonts/oswaldregular.woff2" as="font">
   <link href="./css/style.min.css" rel="stylesheet">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="../../favicon.ico">
   <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./img/favicons/favicon-apple.png">
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="../../img/favicons/favicon-apple.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
@@ -189,7 +191,7 @@
             <source media="(min-width: 768px)"
               srcset="../../img/slider-cat-before-tablet-desktop.png 1x, ../../img/slider-cat-before-tablet-desktop@2x.png 2x">
             <img class="live-example__slider-left-photo" src="../../img/slider-cat-before.png" width="140" height="256"
-              srcset="../../img/slider-cat-before@2x.png 2x" alt="Слева часть упитанного котика.">
+              srcset="../../img/slider-cat-before@2x.png 2x" loading="lazy" alt="Слева часть упитанного котика.">
           </picture>
           <picture>
             <source type="image/webp" media="(min-width: 768px)"
@@ -199,10 +201,13 @@
             <source media="(min-width: 768px)"
               srcset="../../img/slider-cat-after-tablet-desktop.png 1x, ../../img/slider-cat-after-tablet-desktop@2x.png 2x">
             <img class="live-example__slider-right-photo" src="../../img/slider-cat-after.png" width="140" height="256"
-              srcset="../../img/slider-cat-after@2x.png 2x" alt="Правая часть худого котика.">
+              srcset="../../img/slider-cat-after@2x.png 2x" loading="lazy" alt="Правая часть худого котика.">
           </picture>
           <div class="live-example__wrapper-slider-button">
             <div class="live-example__slider-button">
+              <span class="visually-hidden">
+                Конпка передвижения слайдера влево-вправо
+              </span>
             </div>
           </div>
         </div>
@@ -215,7 +220,7 @@
       <div class="for-dealers__container">
         <div class="for-dealers__wrapper">
           <p class="for-dealers__invitation">
-            Приглашаем к сотрудничеству дилеров!
+            Приглашаем <br> к сотрудничеству дилеров!
           </p>
           <p class="for-dealers__address">
             ул. Большая Конюшенная, д. 19/8 <br class="for-dealers__breaker">

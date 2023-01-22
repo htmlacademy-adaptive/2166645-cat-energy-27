@@ -2,11 +2,11 @@
   display: flex;
   flex-direction: column;
   width: 280px;
-  padding: 0;
   margin: 0;
+  padding-top: 0;
   .padding-horizontal(@value);
+  padding-bottom: 41px;
   border: none;
-  padding-bottom: 34px;
 
   @media (min-width: @tablet-width) {
     width: 628px;
@@ -28,6 +28,7 @@
   text-transform: none;
   color: @base-text-color;
   margin-bottom: 40px;
+  padding: 0;
 
   &::after {
     position: absolute;
@@ -35,7 +36,7 @@
     width: 1000000%;
     height: 2px;
     background-color: @button-back-color;
-    top: 55%;
+    top: 58%;
     left: calc(100% + 23px);
   }
 
@@ -75,7 +76,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 300px 314px;
-    column-gap: 14px;
+    column-gap: 45px;
   }
 
   @media (min-width: @desktop-width) {
@@ -89,11 +90,11 @@
   color: @base-text-color;
 
   &:not(:last-child) {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: @tablet-width) {
-    font-size: 20px;
+    font-size: @value;
     line-height: 30px;
 
     &:not(:nth-last-child(-n+2)) {
@@ -126,14 +127,14 @@
   position: absolute;
   top: -6px;
   left: 0;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border: 1px solid #cdcdcd;
 
   @media (min-width: @tablet-width) {
     top: -5px;
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
   }
 }
 
@@ -157,6 +158,10 @@
 
 .additional-goods__label:hover .additional-goods__mark {
   border-color: #bababa;
+}
+
+.additional-goods__label:focus-within .additional-goods__mark {
+  border: 2px solid @paragraph-text-color;
 }
 
 .additional-goods__input {

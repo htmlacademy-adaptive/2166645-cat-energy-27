@@ -6,8 +6,6 @@
   padding-bottom: 23px;
   margin: 0 auto;
   border: none;
-  outline: 5px solid rgba(32, 9, 212, 0.8);
-  outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
     width: 632px;
@@ -19,7 +17,7 @@
   @media (min-width: @desktop-width) {
     width: 1220px;
     .padding-horizontal(110px);
-    padding-bottom: 67px;
+    padding-bottom: 69px;
   }
 }
 
@@ -30,7 +28,7 @@
   text-transform: none;
   color: @base-text-color;
   padding: 0;
-  margin-bottom: 38px;
+  margin-bottom: 32px;
 
   &::after {
     position: absolute;
@@ -45,7 +43,7 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 76px;
+    margin-bottom: 70px;
 
     &::before {
       position: absolute;
@@ -53,7 +51,7 @@
       width: 1000000%;
       height: 2px;
       background-color: @button-back-color;
-      top: 60%;
+      top: 58%;
       right: calc(100% + 39px);
     }
 
@@ -64,7 +62,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 72px;
+
     &::before {
+      top: 63%;
       right: calc(100% + 40px);
     }
 
@@ -87,7 +88,7 @@
   display: block;
   margin: 0;
   width: 253px;
-  min-height: 150px;
+  min-height: 132px;
   border: none;
   padding: 9px 12px 9px 15px;
   outline: 1px solid #e7e7e7;
@@ -97,12 +98,13 @@
     font-size: @value;
     line-height: 30px;
     width: 593px;
-    min-height: 174px;
+    min-height: 154px;
     padding: 10px 19px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1182px;
+    min-height: 152px;
     padding: 10px 19px;
   }
 }

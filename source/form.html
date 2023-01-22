@@ -31,18 +31,18 @@
           </span>
         </button>
       </div>
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
+      <ul class="main-nav__list main-nav__list--form">
+        <li class="main-nav__item main-nav__item--form">
           <a class="main-nav__link" href="./index.html">
             Главная
           </a>
         </li>
-        <li class="main-nav__item">
+        <li class="main-nav__item main-nav__item--form">
           <a class="main-nav__link" href="./catalog.html">
             Каталог продукции
           </a>
         </li>
-        <li class="main-nav__item main-nav__item--active">
+        <li class="main-nav__item main-nav__item--active main-nav__item--form">
           <a class="main-nav__link" href="/">
             Подбор программы
           </a>
@@ -83,8 +83,7 @@
             <li class="main-database__item">
               <label class="main-database__label" for="cat-age">
                 <span class="main-database__name">Возраст (лет):</span>
-                <input class="main-database__input main-database__input--error" type="number" name="cat-age"
-                  id="cat-age" placeholder="7">
+                <input class="main-database__input" type="number" name="cat-age" id="cat-age" placeholder="7">
               </label>
             </li>
           </ul>
@@ -136,7 +135,7 @@
         </legend>
         <div class="owner-contacts__wrapper">
           <label class="owner-contacts__label owner-contacts__label--mail" for="owner-email">
-            E-mail:
+            E-mail:*
             <input class="owner-contacts__input owner-contacts__input--error" type="email" name="owner-email"
               id="owner-email" placeholder="kuklachev@gmail.com">
             <svg class="owner-contacts__icon owner-contacts__icon--error" width="18" height="14">
@@ -225,11 +224,12 @@
       <div class="for-dealers__container">
         <div class="for-dealers__wrapper for-dealers__wrapper--darker">
           <p class="for-dealers__invitation">
-            Приглашаем к сотрудничеству дилеров!
+            Приглашаем <br> к сотрудничеству дилеров!
           </p>
-          <p class="for-dealers__address">
+          <p class="for-dealers__address for-dealers__address--with-breakers">
             ул. Большая Конюшенная, д. 19/8 <br class="for-dealers__breaker">
-            <br class="for-dealers__breaker"> Санкт-Петербург
+            <br class="for-dealers__breaker for-dealers__breaker--desktop-no"> Санкт-<br
+              class="for-dealers__breaker--desktop-yes">Петербург
           </p>
         </div>
       </div>

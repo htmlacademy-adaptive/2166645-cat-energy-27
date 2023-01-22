@@ -4,14 +4,12 @@
   width: 280px;
   margin: 0 auto;
   padding: 0 @value;
-  padding-bottom: 53px;
-  outline: 5px solid rgba(0, 255, 0, 0.8);
-  outline-offset: -5px;
+  padding-bottom: 49px;
 
   @media (min-width: @tablet-width) {
     width: 708px;
     padding: 0 30px;
-    padding-bottom: 47px;
+    padding-bottom: 42px;
     border-bottom: 1px solid #e6e6e6;
   }
 
@@ -19,7 +17,7 @@
     width: 1224px;
     padding-left: 110px;
     padding-right: 106px;
-    padding-bottom: 126px;
+    padding-bottom: 122px;
     border-bottom: none;
   }
 }
@@ -29,18 +27,20 @@
   font-style: inherit;
   font-weight: inherit;
   font-size: 36px;
-  line-height: @value * 2;
+  line-height: 40px;
   margin: 0;
   margin-top: 0;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
   padding: 0;
-  outline: 5px solid rgba(0, 255, 0, 0.8);
-  outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
-    font-size: @value * 3;
-    line-height: @value * 3;
-    margin-bottom: 183px;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 182px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 181px;
   }
 }
 
@@ -54,10 +54,10 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 249px);
-    row-gap: 245px;
-    column-gap: 177px;
+    row-gap: 237px;
+    column-gap: 135px;
     counter-reset: section;
-    margin-bottom: 57px;
+    margin-bottom: 58px;
   }
 
   @media (min-width: @desktop-width) {
@@ -75,7 +75,7 @@
     content: "";
     background-image: url("../../../../img/leaf.svg");
     background-repeat: no-repeat;
-    width: 60px;
+    width: 61px;
     height: 60px;
     top: 0;
     left: 0;
@@ -86,7 +86,7 @@
     content: "";
     background-image: url("../../../../img/powder.svg");
     background-repeat: no-repeat;
-    width: 60px;
+    width: 61px;
     height: 60px;
     top: 0;
     left: 0;
@@ -97,7 +97,7 @@
     content: "";
     background-image: url("../../../../img/eat.svg");
     background-repeat: no-repeat;
-    width: 60px;
+    width: 61px;
     height: 60px;
     top: 0;
     left: 0;
@@ -108,7 +108,7 @@
     content: "";
     background-image: url("../../../../img/clocks.svg");
     background-repeat: no-repeat;
-    width: 60px;
+    width: 61px;
     height: 60px;
     top: 0;
     left: 0;
@@ -122,38 +122,61 @@
       content: counters(section, ".") " ";
       font-size: 280px;
       line-height: 280px;
-      top: -140px;
-      left: max(45%);
-      color: #f2f2f2;
+      top: -149px;
+      left: max(46%);
+      color: @footer-back-color;
       z-index: -1;
     }
 
     &--leaf::before {
-      width: 80px;
+      width: 81px;
       height: 80px;
       top: calc(-100% - 31px);
       left: 0;
     }
 
     &--powder::before {
-      width: 80px;
+      width: 81px;
       height: 80px;
       top: calc(-100% - 31px);
       left: 0;
     }
 
     &--eat::before {
-      width: 80px;
+      width: 81px;
       height: 80px;
       top: calc(-100% - 31px);
       left: 0;
     }
 
     &--clocks::before {
-      width: 80px;
+      width: 81px;
       height: 80px;
       top: calc(-100% - 31px);
       left: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      top: -147px;
+      left: max(47%);
+    }
+
+    &--leaf::before {
+      top: calc(-100% - 30px);
+    }
+
+    &--powder::before {
+      top: calc(-100% - 30px);
+    }
+
+    &--eat::before {
+      top: calc(-100% - 30px);
+    }
+
+    &--clocks::before {
+      top: calc(-100% - 30px);
     }
   }
 }
@@ -170,13 +193,12 @@
   padding: 0;
   padding-top: 2px;
   padding-left: 81px;
-  outline: 5px solid rgba(0, 255, 0, 0.8);
-  outline-offset: -5px;
+  padding-bottom: 4px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    padding-top: 0;
+    padding-top: 2px;
     padding-left: 0;
   }
 }
