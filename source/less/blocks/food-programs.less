@@ -1,20 +1,19 @@
 .food-programs {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   width: 280px;
   margin: 0 auto;
-  margin-bottom: @value;
-  padding: 0 @value;
+  padding: @value @value 10px @value;
 
   @media (min-width: @tablet-width) {
     width: 708px;
-    padding: 0 30px;
-    margin-bottom: 45px;
+    padding: 0 30px 25px 30px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1220px;
-    padding: 0 110px;
-    margin-bottom: 71px;
+    padding: 82px 110px 35px 110px;
   }
 }
 
@@ -38,71 +37,76 @@
 }
 
 .food-programs__item {
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
   background-color: @footer-back-color;
-  padding-top: 30px;
+  padding-top: 21px;
   padding-bottom: 22px;
   .padding-horizontal(@value);
 
-  &--slim::before {
-    position: absolute;
-    content: "";
-    background-image: url("../../../../img/cat-sit.svg");
-    width: 50px;
-    height: 53px;
-    top: 21px;
-    left: 22px;
-  }
-
-  &--pro::before {
-    position: absolute;
-    content: "";
-    background-image: url("../../../../img/cat-walk.svg");
-    width: 67px;
-    height: 50px;
-    top: 24px;
-    left: 13px;
-  }
-
   @media (min-width: @tablet-width) {
+    position: relative;
     padding-top: 77px;
     padding-bottom: 57px;
     padding-left: 52px;
     padding-right: 316px;
+  }
 
-    &--slim::before {
-      background-repeat: no-repeat;
+  @media (min-width: @desktop-width) {
+    padding-top: 41px;
+    padding-bottom: 59px;
+    padding-right: 61px;
+  }
+}
+
+.food-programs__icon {
+  padding: 0;
+  margin: 0;
+
+  &--slim {
+    margin-left: 2px;
+    margin-right: 19px;
+  }
+
+  &--pro {
+    margin-top: 3px;
+    margin-left: -7px;
+    margin-right: 11px;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+
+    &--slim {
       width: 200px;
       height: 211px;
-      top: 81px;
-      left: 446px;
+      top: 80px;
+      left: 445px;
     }
 
-    &--pro::before {
-      background-repeat: no-repeat;
+    &--pro {
       width: 268px;
       height: 200px;
-      top: 91px;
-      left: 412px;
+      top: 88px;
+      left: 419px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 59px;
-    padding-right: 61px;
+    position: static;
 
-    &--slim::before {
+    &--slim {
       width: 100px;
       height: 106px;
-      top: 41px;
-      left: 52px;
+      margin-right: 60px;
     }
 
-    &--pro::before {
+    &--pro {
       width: 134px;
-      height: 100px;
-      top: 47px;
-      left: 33px;
+      height: 102px;
+      margin-left: -17px;
+      margin-right: 45px;
     }
   }
 }
@@ -117,19 +121,19 @@
   display: block;
   padding: 0;
   margin: 0;
-  padding-left: 71px;
+  margin-top: 9px;
   margin-bottom: 29px;
-  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
     padding-left: 1px;
+    margin-top: 0;
     margin-bottom: 24px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 162px;
+    margin-top: 35px;
     margin-bottom: 73px;
   }
 }
@@ -186,7 +190,7 @@
   background-color: #d9d9d9;
   width: 240px;
   height: 1px;
-  top: -19px;
+  top: -@value;
   left: 0;
 
   @media (min-width: @tablet-width) {

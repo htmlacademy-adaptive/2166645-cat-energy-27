@@ -4,10 +4,11 @@
 
   @media (min-width: @tablet-width) {
     min-width: 768px;
-    background: linear-gradient(@button-text-color 57%, @live-example-back-color 43%);
+    background: linear-gradient(@button-text-color 57.3%, @live-example-back-color 42.7%);
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 30px;
     position: relative;
     min-width: 1440px;
     background: none;
@@ -16,9 +17,9 @@
       position: absolute;
       content: "";
       width: 100%;
-      height: 462px;
+      height: 464px;
       background-color: @footer-back-color;
-      top: 136px;
+      top: 165px;
       z-index: -1;
     }
   }
@@ -85,13 +86,13 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 67px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 1 / 2;
     padding: 0;
-    margin-bottom: 83px;
+    margin-bottom: 69px;
   }
 }
 
@@ -147,6 +148,7 @@
     grid-template-columns: repeat(2, 162px);
     column-gap: 42px;
     row-gap: 10px;
+    padding-top: 11px;
     margin: 0;
 
     &::before {
@@ -154,7 +156,7 @@
       height: 70px;
       background-color: transparent;
       border: 1px solid #cdcdcd;
-      top: -13px;
+      top: 0;
       left: 0;
     }
 
@@ -163,7 +165,7 @@
       height: 70px;
       background-color: transparent;
       border: 1px solid #cdcdcd;
-      top: -13px;
+      top: 0;
       right: 0;
     }
   }
@@ -240,6 +242,7 @@
     flex-direction: column;
     align-items: flex-end;
     width: 174px;
+    margin-top: 12px;
   }
 
   @media (min-width: @desktop-width) {
@@ -249,6 +252,7 @@
     align-items: center;
     padding: 0;
     margin: 0;
+    margin-top: 3px;
   }
 }
 
@@ -335,8 +339,8 @@
   position: absolute;
   content: "";
   background-color: @button-text-color;
-  width: 40px;
-  height: 40px;
+  width: 37px;
+  height: 37px;
   border-radius: 50%;
   border: 2px solid #666666;
   top: 128px;
@@ -351,7 +355,7 @@
     border: 9px solid transparent;
     border-right-color: #666666;
     top: 50%;
-    left: 15%;
+    left: 17%;
     transform: translateX(-50%) translateY(-50%);
   }
 
@@ -363,12 +367,16 @@
     border: 9px solid transparent;
     border-left-color: #666666;
     top: 50%;
-    right: -30%;
+    right: -35%;
     transform: translateX(-50%) translateY(-50%);
   }
 
   @media (min-width: @tablet-width) {
     top: 256px;
+
+    &::after {
+      right: -32%;
+    }
   }
 }
 

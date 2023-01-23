@@ -3,21 +3,18 @@
   flex-direction: column;
   width: 280px;
   margin: 0 auto;
-  padding: 0 @value;
+  padding: 10px @value 0 @value;
   padding-bottom: 49px;
 
   @media (min-width: @tablet-width) {
     width: 708px;
-    padding: 0 30px;
-    padding-bottom: 42px;
+    padding: @value 30px 47px 30px;
     border-bottom: 1px solid #e6e6e6;
   }
 
   @media (min-width: @desktop-width) {
     width: 1224px;
-    padding-left: 110px;
-    padding-right: 106px;
-    padding-bottom: 122px;
+    padding: 36px 106px 39px 110px;
     border-bottom: none;
   }
 }
@@ -36,11 +33,7 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 182px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 181px;
+    margin-bottom: 72px;
   }
 }
 
@@ -54,10 +47,9 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 249px);
-    row-gap: 237px;
+    row-gap: 77px;
     column-gap: 135px;
     counter-reset: section;
-    margin-bottom: 58px;
   }
 
   @media (min-width: @desktop-width) {
@@ -68,117 +60,51 @@
 }
 
 .food-instruction__item {
-  position: relative;
-
-  &--leaf::before {
-    position: absolute;
-    content: "";
-    background-image: url("../../../../img/leaf.svg");
-    background-repeat: no-repeat;
-    width: 61px;
-    height: 60px;
-    top: 0;
-    left: 0;
-  }
-
-  &--powder::before {
-    position: absolute;
-    content: "";
-    background-image: url("../../../../img/powder.svg");
-    background-repeat: no-repeat;
-    width: 61px;
-    height: 60px;
-    top: 0;
-    left: 0;
-  }
-
-  &--eat::before {
-    position: absolute;
-    content: "";
-    background-image: url("../../../../img/eat.svg");
-    background-repeat: no-repeat;
-    width: 61px;
-    height: 60px;
-    top: 0;
-    left: 0;
-  }
-
-  &--clocks::before {
-    position: absolute;
-    content: "";
-    background-image: url("../../../../img/clocks.svg");
-    background-repeat: no-repeat;
-    width: 61px;
-    height: 60px;
-    top: 0;
-    left: 0;
-  }
-
+  display: grid;
+  grid-template-columns: 60px 200px;
+  column-gap: @value;
 
   @media (min-width: @tablet-width) {
+    position: relative;
+    grid-template-columns: 80px 169px;
+    row-gap: 29px;
+
     &::after {
       position: absolute;
       counter-increment: section;
       content: counters(section, ".") " ";
       font-size: 280px;
       line-height: 280px;
-      top: -149px;
+      top: -40px;
       left: max(46%);
       color: @footer-back-color;
       z-index: -1;
-    }
-
-    &--leaf::before {
-      width: 81px;
-      height: 80px;
-      top: calc(-100% - 31px);
-      left: 0;
-    }
-
-    &--powder::before {
-      width: 81px;
-      height: 80px;
-      top: calc(-100% - 31px);
-      left: 0;
-    }
-
-    &--eat::before {
-      width: 81px;
-      height: 80px;
-      top: calc(-100% - 31px);
-      left: 0;
-    }
-
-    &--clocks::before {
-      width: 81px;
-      height: 80px;
-      top: calc(-100% - 31px);
-      left: 0;
     }
   }
 
   @media (min-width: @desktop-width) {
     &::after {
-      top: -147px;
       left: max(47%);
     }
-
-    &--leaf::before {
-      top: calc(-100% - 30px);
-    }
-
-    &--powder::before {
-      top: calc(-100% - 30px);
-    }
-
-    &--eat::before {
-      top: calc(-100% - 30px);
-    }
-
-    &--clocks::before {
-      top: calc(-100% - 30px);
-    }
   }
+}
+
+.food-instruction__icon-container {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background-color: @button-back-color;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.food-instruction__icon {
+  margin: auto;
 }
 
 .food-instruction__step-description {
@@ -188,18 +114,21 @@
   font-size: 14px;
   line-height: 18px;
   color: @paragraph-text-color;
+  grid-column: 2 / 3;
   display: block;
   margin: 0;
   padding: 0;
   padding-top: 2px;
-  padding-left: 81px;
   padding-bottom: 4px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
     padding-top: 2px;
-    padding-left: 0;
+    padding-right: 10px;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    padding-bottom: 57px;
   }
 }
 

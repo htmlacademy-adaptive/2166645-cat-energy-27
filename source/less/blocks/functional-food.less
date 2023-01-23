@@ -5,17 +5,14 @@
   align-items: center;
   width: 320px;
   margin: 0 auto;
-  padding-bottom: @value;
 
   @media (min-width: @tablet-width) {
     width: 768px;
-    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
     width: 1440px;
-    padding-bottom: 82px;
 
     &::before {
       position: absolute;
@@ -40,6 +37,12 @@
   background-color: @hero-back-color;
   background-image: linear-gradient(@hero-back-color, @hero-back-color), url("../../../../img/background/cat-main-background.png");
   background-repeat: no-repeat;
+  padding: 27px 35px 29px 35px;
+  min-height: 246px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 
   @media (min-resolution: 2dppx) {
     background-image: linear-gradient(@hero-back-color, @hero-back-color), url("../../../../img/background/cat-main-background@2x.png");
@@ -49,6 +52,12 @@
   @media (min-width: @tablet-width) {
     background-color: @button-text-color;
     background-image: none;
+    min-height: 181px;
+    padding: 40px 231px 21px 117px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 81px 830px 52px 190px;
   }
 }
 
@@ -59,24 +68,17 @@
   color: @button-text-color;
   font-size: 36px;
   line-height: 36px;
-  display: block;
-  text-align: center;
-  width: 250px;
-  margin: 27px 35px 25px 37px;
+  margin: 0;
+  margin-bottom: 25px;
   padding: 0;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin: 38px 231px 42px 117px;
-    width: 420px;
+    margin-bottom: 41px;
     text-align: left;
     color: @base-text-color;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin: 82px 830px 40px 190px;
-    width: 420px;
   }
 }
 
@@ -88,25 +90,20 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
-  width: 198px;
-  margin-left: 62px;
-  margin-bottom: 164px;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: @value;
     line-height: @value;
     color: @base-text-color;
     display: block;
-    margin: 0;
     padding: 0;
-    width: 283px;
-    margin-left: 119px;
-    margin-bottom: @value;
+    align-self: flex-start;
+    margin-left: 2px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 190px;
-    margin-bottom: 52px;
+    margin-left: 1px;
   }
 }
 
@@ -140,6 +137,7 @@
     width: 709px;
     height: 609px;
     margin: 0;
+    margin-top: -1px;
     padding: 0;
   }
 

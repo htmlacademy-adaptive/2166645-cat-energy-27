@@ -1,4 +1,4 @@
-.main-footer {
+.footer {
   min-width: 320px;
   background-color: @footer-back-color;
 
@@ -11,7 +11,7 @@
   }
 }
 
-.main-footer__container {
+.footer__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,7 +35,7 @@
   }
 }
 
-.main-footer__logo-link-name {
+.footer__logo-link-name {
   display: block;
   text-align: center;
   width: 280px;
@@ -52,7 +52,7 @@
   }
 }
 
-.main-footer__logo-name {
+.footer__logo-name {
   color: @dealer-title-text-color;
 
   &:hover {
@@ -69,7 +69,7 @@
   }
 }
 
-.main-footer__social-list {
+.footer__social-list {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -91,11 +91,11 @@
   }
 }
 
-.main-footer__social-item:not(:last-child) {
+.footer__social-item:not(:last-child) {
   margin-right: 24px;
 }
 
-.main-footer__social-icon {
+.footer__social-icon {
   color: #666666;
 
   &:hover {
@@ -107,7 +107,7 @@
   }
 }
 
-.main-footer__htmlacademy {
+.footer__htmlacademy {
   display: flex;
   width: 281px;
   justify-content: space-between;
@@ -127,25 +127,5 @@
 
   @media (min-width: @desktop-width) {
     padding: 0;
-  }
-}
-
-.htmlacademy__link-name {
-  color: @paragraph-text-color;
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.htmlacademy__icon {
-  color: #666666;
-
-  &:hover {
-    color: @button-back-color;
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
