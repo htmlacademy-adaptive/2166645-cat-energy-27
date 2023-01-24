@@ -16,7 +16,9 @@
 
 <body class="page__body">
   <header class="header">
-    <!--у элемента .nav есть 2 модификатора: nav--closed - закрывает меню, nav--opened отображает меню (бургер) и крестик.-->
+    <!--У элемента .nav 2 модификатора: nav--opened отображает меню c кнопками бургер (когда меню закрыто) и крестик (когда меню открыто) (класс nav__toggle);
+      nav--closed - закрывает меню, при этом кнопка nav__toggle исчезает.
+      класс nav--nojs показывает меню в потоке при неработающем js.-->
     <nav class="nav nav--opened nav--nojs">
       <div class="nav__wrapper">
         <a class="nav__logo-link" href="/">
