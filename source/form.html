@@ -7,9 +7,9 @@
   <link href="css/style.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-  <!--У элемента .nav 2 модификатора: nav--opened отображает меню c кнопками бургер (когда меню закрыто) и крестик (когда меню открыто) (класс nav__toggle);
-      nav--closed - закрывает меню, при этом кнопка nav__toggle исчезает.
-      класс nav--nojs показывает меню в потоке при неработающем js.-->
+  <!--У элемента nav 2 модификатора: opened отображает меню c кнопками "бургер" (когда меню закрыто) и крестик (когда меню открыто) (класс nav__toggle);
+  closed - закрывает меню, при этом кнопка nav__toggle исчезает.
+  Модификатор nojs показывает меню в потоке при неработающем js-->
 <body class="page__body">
   <header class="header">
     <nav class="nav nav--opened nav--nojs">
@@ -233,9 +233,11 @@
           </p>
         </div>
       </div>
-      <iframe class="for-dealers__yandex-map" src="https://yandex.ru/map-widget/v1/-/CCUnF6EuwA" height="362"
-        title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург.">
-      </iframe>
+      <div class="for-dealers__map">
+        <iframe class="for-dealers__yandex-map" src="https://yandex.ru/map-widget/v1/-/CCUnF6EuwA" height="362"
+          title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург.">
+        </iframe>
+      </div>
     </section>
   </main>
   <footer class="footer">
