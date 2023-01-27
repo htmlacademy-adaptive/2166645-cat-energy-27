@@ -311,6 +311,10 @@
   position: absolute;
   content: "";
   left: 50%;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
 
   &::before {
     position: absolute;
@@ -333,6 +337,10 @@
   &:active::before {
     background-color: rgba(94, 170, 47, 0.6);
   }
+}
+
+.live-example__wrapper-slider-button:focus-within .live-example__wrapper-slider-button::before {
+  border: 2px solid @paragraph-text-color;
 }
 
 .live-example__slider-button {
