@@ -164,9 +164,6 @@
 
 .related-products__link-name {
   text-decoration: none;
-}
-
-.related-products__product-name {
   font-family: inherit;
   font-size: 16px;
   line-height: 16px;
@@ -263,6 +260,9 @@
   text-align: center;
   width: 260px;
   padding: 10px;
+  height: max-content;
+  //margin-top: auto;
+  //margin-bottom: auto;
 
   @media (min-width: @tablet-width) {
     grid-column: 1 / -1;
@@ -272,7 +272,6 @@
   @media (min-width: @desktop-width) {
     grid-column: 3 / -1;
     width: 224px;
-    margin-top: 15px;
-    margin-bottom: 14px;
+    align-self: center;
   }
 }

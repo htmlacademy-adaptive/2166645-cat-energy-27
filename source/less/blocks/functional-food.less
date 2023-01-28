@@ -11,25 +11,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: relative;
     width: 1440px;
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: 720px;
-      height: 694px;
-      top: -142px;
-      left: 50%;
-      background-color: @hero-back-color;
-      background-image: linear-gradient(@hero-back-color, @hero-back-color), url("../../../../img/background/cat-main-background-desktop.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      @media (min-resolution: 2dppx) {
-        background-image: linear-gradient(@hero-back-color, @hero-back-color), url("../../../../img/background/cat-main-background-desktop@2x.png");
-      }
-    }
   }
 }
 
@@ -148,6 +130,7 @@
     height: 499px;
     top: -314px;
     left: 558px;
+    z-index: 2;
   }
 }
 

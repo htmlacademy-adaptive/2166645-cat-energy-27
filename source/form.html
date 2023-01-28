@@ -7,9 +7,10 @@
   <link href="css/style.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-  <!--У элемента nav 2 модификатора: opened отображает меню c кнопками "бургер" (когда меню закрыто) и крестик (когда меню открыто) (класс nav__toggle);
+<!--У элемента nav 2 модификатора: opened отображает меню c кнопками "бургер" (когда меню закрыто) и крестик (когда меню открыто) (класс nav__toggle);
   closed - закрывает меню, при этом кнопка nav__toggle исчезает.
   Модификатор nojs показывает меню в потоке при неработающем js-->
+
 <body class="page__body">
   <header class="header">
     <nav class="nav nav--opened nav--nojs">
@@ -95,8 +96,8 @@
           <ul class="weight-program__list">
             <li class="weight-program__item">
               <label class="weight-program__label" for="weight-loss">
-                <input class="visually-hidden weight-program__input" type="radio" name="weight-loss" value="weight-loss"
-                  id="weight-loss" checked>
+                <input class="visually-hidden weight-program__input" type="radio" name="weight-program"
+                  value="weight-loss" id="weight-loss" checked>
                 <span class="weight-program__radio">
                 </span>
                 <span class="weight-program__name">
@@ -106,7 +107,7 @@
             </li>
             <li class="weight-program__item">
               <label class="weight-program__label" for="weight-gain">
-                <input class="visually-hidden weight-program__input" type="radio" name="weight-gain" id="weight-gain"
+                <input class="visually-hidden weight-program__input" type="radio" name="weight-program" id="weight-gain"
                   value="weight-gain">
                 <span class="weight-program__radio">
                 </span>
@@ -117,7 +118,7 @@
             </li>
             <li class="weight-program__item">
               <label class="weight-program__label" for="weight-need-advice">
-                <input class="visually-hidden weight-program__input" type="radio" name="weight-need-advice"
+                <input class="visually-hidden weight-program__input" type="radio" name="weight-program"
                   id="weight-need-advice" value="need-advice">
                 <span class="weight-program__radio">
                 </span>
